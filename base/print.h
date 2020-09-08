@@ -7,6 +7,9 @@
 
 #include "base/pch.h"
 
+namespace leadgrey
+{
+
 template<typename T>
 void Print(const T &t, ...)
 {
@@ -40,16 +43,16 @@ void Print(stack<T> stk)
 }
 
 template<typename KeyType, typename ValueType>
-void Print(const map<KeyType, ValueType> &stMap)
+void Print(const map<KeyType, ValueType> &st_map)
 {
-    for (auto &pair : stMap)
+    for (auto &pair : st_map)
         cout << pair.first << ' ' << pair.second << endl;
 }
 
 template<typename T>
-void Print(const set<T> &stSet)
+void Print(const set<T> &st_set)
 {
-    for (auto &val : stSet)
+    for (auto &val : st_set)
         cout << val << ' ';
     cout << endl;
 }
@@ -115,5 +118,7 @@ void Print(const set<T> &stSet)
 //     }
 //     cout << endl;
 // }
+
+}
 
 #endif

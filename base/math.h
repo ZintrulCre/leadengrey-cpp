@@ -3,8 +3,9 @@
 
 #include "base/pch.h"
 
-namespace LeadGrey
+namespace leadgrey
 {
+
 template<typename ValueType>
 ValueType Max(ValueType)
 {

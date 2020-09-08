@@ -17,7 +17,7 @@ int main() {
 
     Solution b;
     vector<vector<int>> res = b.combine(8, 4);
-    Print(res);
+    leadgrey::Print(res);
 
     return 0;
 }
