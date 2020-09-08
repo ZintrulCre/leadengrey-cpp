@@ -1,3 +1,0 @@
-/home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles/rebuild_cache.dir
-/home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles/edit_cache.dir
-/home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles/leadgrey.dir
