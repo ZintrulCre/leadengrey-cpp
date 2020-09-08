@@ -64,16 +64,16 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/joelzychen/LeadGrey
+CMAKE_SOURCE_DIR = /home/joelzychen/repository/leadgrey-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/joelzychen/LeadGrey/build
+CMAKE_BINARY_DIR = /home/joelzychen/repository/leadgrey-cpp/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/LeadGrey.dir/all
+all: CMakeFiles/leadgrey.dir/all
 
 .PHONY : all
 
@@ -83,36 +83,36 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/LeadGrey.dir/clean
+clean: CMakeFiles/leadgrey.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/LeadGrey.dir
+# Target rules for target CMakeFiles/leadgrey.dir
 
 # All Build rule for target.
-CMakeFiles/LeadGrey.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LeadGrey.dir/build.make CMakeFiles/LeadGrey.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LeadGrey.dir/build.make CMakeFiles/LeadGrey.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joelzychen/LeadGrey/build/CMakeFiles --progress-num=1,2 "Built target LeadGrey"
-.PHONY : CMakeFiles/LeadGrey.dir/all
+CMakeFiles/leadgrey.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leadgrey.dir/build.make CMakeFiles/leadgrey.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leadgrey.dir/build.make CMakeFiles/leadgrey.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles --progress-num=1,2 "Built target leadgrey"
+.PHONY : CMakeFiles/leadgrey.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/LeadGrey.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joelzychen/LeadGrey/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/LeadGrey.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joelzychen/LeadGrey/build/CMakeFiles 0
-.PHONY : CMakeFiles/LeadGrey.dir/rule
+CMakeFiles/leadgrey.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/leadgrey.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles 0
+.PHONY : CMakeFiles/leadgrey.dir/rule
 
 # Convenience name for target.
-LeadGrey: CMakeFiles/LeadGrey.dir/rule
+leadgrey: CMakeFiles/leadgrey.dir/rule
 
-.PHONY : LeadGrey
+.PHONY : leadgrey
 
 # clean rule for target.
-CMakeFiles/LeadGrey.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LeadGrey.dir/build.make CMakeFiles/LeadGrey.dir/clean
-.PHONY : CMakeFiles/LeadGrey.dir/clean
+CMakeFiles/leadgrey.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leadgrey.dir/build.make CMakeFiles/leadgrey.dir/clean
+.PHONY : CMakeFiles/leadgrey.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

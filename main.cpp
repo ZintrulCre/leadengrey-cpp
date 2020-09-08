@@ -1,7 +1,9 @@
-#include "Base/base.h"
+#include "base/pch.h"
 
 #include <iostream>
 #include <stdio.h>
+
+using namespace std;
 
 int main() {
     // uint8 a{200}, b{60};
@@ -10,8 +12,11 @@ int main() {
     // int a, b, c;
     // std::cin >> a >> b >> c;
     // std::cout << LeadGrey::Add<int>() << std::endl;
+
     uint16 a, b;
-    std::cin >> a >> b;
+    cin >> a >> b;
+    cout << LeadGrey::Max(a) << endl;
+    cout << LeadGrey::Max(int(3)) << endl;
     std::cout << LeadGrey::Minus(a, b) << std::endl;
 
     return 0;

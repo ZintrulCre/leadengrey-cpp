@@ -1,12 +1,7 @@
 #ifndef LEADGREY_BASE_LIB_H
 #define LEADGREY_BASE_LIB_H
 
-// header
-#include <iostream>
-#include <cstdint>
-#include <typeinfo>
-#include <limits>
-#include <map>
+#include "pch.h"
 
 // type
 using int8 = int8_t;

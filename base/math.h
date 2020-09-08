@@ -1,7 +1,7 @@
 #ifndef LEADGREY_BASE_MATH_H
 #define LEADGREY_BASE_MATH_H
 
-#include "lib.h"
+#include "pch.h"
 
 namespace LeadGrey
 {
@@ -46,7 +46,6 @@ ValueType Minus(const ValueType &value, const ValueTypes &...other_values)
     ValueType difference = Minus<ValueType>(other_values...);
     if (value < Min(difference) + difference)
     {
-        std::cout << "Min of difference: " << Min(difference) << std::endl;
         return Min(difference);
     }
     return value - difference;

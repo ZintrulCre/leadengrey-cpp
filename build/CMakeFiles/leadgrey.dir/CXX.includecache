@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/joelzychen/repository/leadgrey-cpp/base/math.h
+pch.h
+/home/joelzychen/repository/leadgrey-cpp/base/pch.h
+
+/home/joelzychen/repository/leadgrey-cpp/base/pch.h
+iostream
+-
+cstdint
+-
+typeinfo
+-
+limits
+-
+map
+-
+type.h
+/home/joelzychen/repository/leadgrey-cpp/base/type.h
+math.h
+/home/joelzychen/repository/leadgrey-cpp/base/math.h
+
+/home/joelzychen/repository/leadgrey-cpp/base/type.h
+pch.h
+/home/joelzychen/repository/leadgrey-cpp/base/pch.h
+
+/home/joelzychen/repository/leadgrey-cpp/main.cpp
+base/pch.h
+/home/joelzychen/repository/leadgrey-cpp/base/pch.h
+iostream
+-
+stdio.h
+-
+

@@ -68,10 +68,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/joelzychen/LeadGrey
+CMAKE_SOURCE_DIR = /home/joelzychen/repository/leadgrey-cpp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/joelzychen/LeadGrey/build
+CMAKE_BINARY_DIR = /home/joelzychen/repository/leadgrey-cpp/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joelzychen/LeadGrey/build/CMakeFiles /home/joelzychen/LeadGrey/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles /home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/joelzychen/LeadGrey/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/joelzychen/repository/leadgrey-cpp/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -131,17 +131,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named LeadGrey
+# Target rules for targets named leadgrey
 
 # Build rule for target.
-LeadGrey: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 LeadGrey
-.PHONY : LeadGrey
+leadgrey: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 leadgrey
+.PHONY : leadgrey
 
 # fast build rule for target.
-LeadGrey/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LeadGrey.dir/build.make CMakeFiles/LeadGrey.dir/build
-.PHONY : LeadGrey/fast
+leadgrey/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leadgrey.dir/build.make CMakeFiles/leadgrey.dir/build
+.PHONY : leadgrey/fast
 
 main.o: main.cpp.o
 
@@ -149,7 +149,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LeadGrey.dir/build.make CMakeFiles/LeadGrey.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leadgrey.dir/build.make CMakeFiles/leadgrey.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -158,7 +158,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LeadGrey.dir/build.make CMakeFiles/LeadGrey.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leadgrey.dir/build.make CMakeFiles/leadgrey.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -167,7 +167,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/LeadGrey.dir/build.make CMakeFiles/LeadGrey.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/leadgrey.dir/build.make CMakeFiles/leadgrey.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -178,7 +178,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... LeadGrey"
+	@echo "... leadgrey"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
