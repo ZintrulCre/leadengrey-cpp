@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/joelzychen/LeadGrey/Base/base.h
+lib.h
+/home/joelzychen/LeadGrey/Base/lib.h
+math.h
+/home/joelzychen/LeadGrey/Base/math.h
+
+/home/joelzychen/LeadGrey/Base/lib.h
+iostream
+-
+cstdint
+-
+typeinfo
+-
+limits
+-
+map
+-
+
+/home/joelzychen/LeadGrey/Base/math.h
+lib.h
+/home/joelzychen/LeadGrey/Base/lib.h
+
+/home/joelzychen/LeadGrey/main.cpp
+Base/base.h
+/home/joelzychen/LeadGrey/Base/base.h
+iostream
+-
+stdio.h
+-
+
