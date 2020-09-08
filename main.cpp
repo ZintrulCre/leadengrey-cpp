@@ -1,9 +1,5 @@
 #include "base/pch.h"
-
-#include <iostream>
-#include <stdio.h>
-
-using namespace std;
+#include "online-judge/pch.h"
 
 int main() {
     // uint8 a{200}, b{60};
@@ -13,11 +9,15 @@ int main() {
     // std::cin >> a >> b >> c;
     // std::cout << LeadGrey::Add<int>() << std::endl;
 
-    uint16 a, b;
-    cin >> a >> b;
-    cout << LeadGrey::Max(a) << endl;
-    cout << LeadGrey::Max(int(3)) << endl;
-    std::cout << LeadGrey::Minus(a, b) << std::endl;
+    // uint16 a, b;
+    // cin >> a >> b;
+    // cout << LeadGrey::Max(a) << endl;
+    // cout << LeadGrey::Max(int(3)) << endl;
+    // std::cout << LeadGrey::Minus(a, b) << std::endl;
+
+    Solution b;
+    vector<vector<int>> res = b.combine(8, 4);
+    Print(res);
 
     return 0;
 }

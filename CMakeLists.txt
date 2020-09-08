@@ -13,7 +13,9 @@ message(STATUS "source dir: " ${PROJECT_SOURCE_DIR})
 message(STATUS "binary dir: " ${PROJECT_BINARY_DIR})
 message(STATUS "output dir: " ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 
+include_directories(./)
 
 aux_source_directory(. DIR_SOURCES)
+aux_source_directory(online-judge/leetcode/ LEETCODE_SOURCES)
 
-add_executable(leadgrey ${DIR_SOURCES})
+add_executable(leadgrey ${DIR_SOURCES} ${LEETCODE_SOURCES})

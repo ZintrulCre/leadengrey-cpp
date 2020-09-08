@@ -1,9 +1,8 @@
 #ifndef LEADGREY_BASE_LIB_H
 #define LEADGREY_BASE_LIB_H
 
-#include "pch.h"
+#include "base/pch.h"
 
-// type
 using int8 = int8_t;
 using int16 = int16_t;
 using int32 = int32_t;

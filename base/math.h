@@ -1,7 +1,7 @@
 #ifndef LEADGREY_BASE_MATH_H
 #define LEADGREY_BASE_MATH_H
 
-#include "pch.h"
+#include "base/pch.h"
 
 namespace LeadGrey
 {
