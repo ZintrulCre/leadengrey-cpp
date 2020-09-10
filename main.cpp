@@ -15,9 +15,10 @@ int main() {
     // cout << LeadGrey::Max(int(3)) << endl;
     // std::cout << LeadGrey::Minus(a, b) << std::endl;
 
-    Solution b;
-    vector<vector<int>> res = b.combine(8, 4);
-    leadgrey::Print(res);
+    // Solution solution;
+    // vector<int> v{10,1,2,7,6,1,5};
+    // vector<vector<int>> res = solution.combinationSum2(v, 8);
+    // leadgrey::Print(res);
 
     return 0;
 }

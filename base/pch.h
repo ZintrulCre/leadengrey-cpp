@@ -9,6 +9,7 @@ using namespace std;
 #include <limits>
 
 // stl
+#include <algorithm>
 #include <functional>
 
 // container

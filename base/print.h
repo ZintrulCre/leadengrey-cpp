@@ -42,6 +42,17 @@ void Print(stack<T> stk)
     cout << endl;
 }
 
+template<typename T>
+void Print(queue<T> que)
+{
+    while (!que.empty())
+    {
+        cout << que.front() << ' ';
+        que.pop();
+    }
+    cout << endl;
+}
+
 template<typename KeyType, typename ValueType>
 void Print(const map<KeyType, ValueType> &st_map)
 {
