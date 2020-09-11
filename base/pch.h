@@ -1,8 +1,6 @@
 #ifndef LEADGREY_BASE_PCH_H
 #define LEADGREY_BASE_PCH_H
 
-using namespace std;
-
 #include <iostream>
 #include <cstdint>
 #include <typeinfo>
@@ -21,6 +19,8 @@ using namespace std;
 #include <unordered_map>
 #include <set>
 #include <unordered_set>
+
+using namespace std;
 
 #include "base/type.h"
 #include "base/math.h"
