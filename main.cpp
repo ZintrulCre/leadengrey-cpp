@@ -16,12 +16,13 @@ int main()
     // cout << LeadGrey::Max(a) << endl;
     // cout << LeadGrey::Max(int(3)) << endl;
     // std::cout << LeadGrey::Minus(a, b) << std::endl;
+    
+    // SingletonTest();
 
     // Solution solution;
     // vector<vector<int>> res = solution.combinationSum3(3, 9);
     // leadgrey::Print(res);
 
-    SingletonTest();
 
     return 0;
 }

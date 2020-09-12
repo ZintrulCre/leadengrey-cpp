@@ -31,11 +31,12 @@
 #include <unordered_set>
 
 using namespace std;
-using namespace leadgrey;
 
 #include "base/type.h"
 #include "base/math.h"
 #include "base/print.h"
 #include "base/data-structure.h"
+
+using namespace leadgrey;
 
 #endif

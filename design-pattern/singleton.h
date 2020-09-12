@@ -54,6 +54,7 @@ public:
             return *t_;
         }
 
+        return *t_;
     }
 
     LazySingleton(T&&) = delete;
