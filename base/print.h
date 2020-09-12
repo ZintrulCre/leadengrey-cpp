@@ -5,8 +5,6 @@
 #ifndef LEADGREY_BASE_PRINT_H
 #define LEADGREY_BASE_PRINT_H
 
-#include "base/pch.h"
-
 namespace leadgrey
 {
 

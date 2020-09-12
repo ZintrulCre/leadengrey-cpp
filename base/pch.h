@@ -1,3 +1,7 @@
+//
+// Created by ZintrulCre on 2020-09-08.
+//
+
 #ifndef LEADGREY_BASE_PCH_H
 #define LEADGREY_BASE_PCH_H
 
@@ -21,9 +25,11 @@
 #include <unordered_set>
 
 using namespace std;
+using namespace leadgrey;
 
 #include "base/type.h"
 #include "base/math.h"
 #include "base/print.h"
+#include "base/data-structure.h"
 
 #endif

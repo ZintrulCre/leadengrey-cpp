@@ -15,9 +15,9 @@ int main() {
     // cout << LeadGrey::Max(int(3)) << endl;
     // std::cout << LeadGrey::Minus(a, b) << std::endl;
 
-    Solution solution;
-    vector<vector<int>> res = solution.combinationSum3(3, 9);
-    leadgrey::Print(res);
+    // Solution solution;
+    // vector<vector<int>> res = solution.combinationSum3(3, 9);
+    // leadgrey::Print(res);
 
     return 0;
 }

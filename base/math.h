@@ -1,7 +1,9 @@
+//
+// Created by ZintrulCre on 2020-09-08.
+//
+
 #ifndef LEADGREY_BASE_MATH_H
 #define LEADGREY_BASE_MATH_H
-
-#include "base/pch.h"
 
 namespace leadgrey
 {
