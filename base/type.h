@@ -1,3 +1,7 @@
+//
+// Created by ZintrulCre on 2020-09-10.
+//
+
 #ifndef LEADGREY_BASE_LIB_H
 #define LEADGREY_BASE_LIB_H
 
