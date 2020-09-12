@@ -17,10 +17,9 @@ int main()
     // cout << LeadGrey::Max(int(3)) << endl;
     // std::cout << LeadGrey::Minus(a, b) << std::endl;
 
-    // Solution solution;
-    // vector<int> v{10,1,2,7,6,1,5};
-    // vector<vector<int>> res = solution.combinationSum2(v, 8);
-    // leadgrey::Print(res);
+    Solution solution;
+    vector<vector<int>> res = solution.combinationSum3(3, 9);
+    leadgrey::Print(res);
 
     SingletonTest();
 

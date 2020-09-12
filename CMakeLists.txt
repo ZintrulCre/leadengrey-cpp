@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.17.2)
 
 project(leadgrey)
 
-set(CMAKE_CXX_COMPILER "g++")
+set(CMAKE_CXX_COMPILER "clang++")
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_FLAGS -g -Werror -pthread)
