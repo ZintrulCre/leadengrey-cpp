@@ -9,10 +9,16 @@
 #include <cstdint>
 #include <typeinfo>
 #include <limits>
+#include <chrono>
+
+// thread
+#include <thread>
+#include <mutex>
 
 // stl
 #include <algorithm>
 #include <functional>
+#include <memory>
 
 // container
 #include <vector>
