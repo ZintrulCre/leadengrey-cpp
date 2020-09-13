@@ -19,9 +19,11 @@ int main()
     
     // SingletonTest();
 
-    // Solution solution;
-    // vector<vector<int>> res = solution.combinationSum3(3, 9);
-    // leadgrey::Print(res);
+    Solution solution;
+    vector<vector<char>> vec {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+    string w{"ABCB"};
+    bool res = solution.exist(vec,w);
+    leadgrey::Print(res);
 
 
     return 0;
