@@ -6,7 +6,7 @@
 //         int n = candidates.size();
 //         vector<vector<int>> res;
 //         vector<int> combination;
-//         function<void(int i, int sum)> Backtracking = [&] (int i, int sum)
+//         auto Backtracking = [&] (int i, int sum)
 //         {
 //             if (sum == target)
 //                 res.emplace_back(combination);

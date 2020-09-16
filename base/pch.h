@@ -30,6 +30,9 @@
 #include <set>
 #include <unordered_set>
 
+// boost
+#include <boost/type_index.hpp>
+
 using namespace std;
 
 #include "base/type.h"
