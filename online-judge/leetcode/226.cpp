@@ -5,11 +5,10 @@
 //     TreeNode* invertTree(TreeNode* root) {
 //         if (!root)
 //             return root;
-//         invertTree(root->left);
-//         invertTree(root->right);
-//         TreeNode* temp = root->left;
-//         root->left = root->right;
-//         root->right = temp;
+//         auto left = invertTree(root->left);
+//         auto right = invertTree(root->right);
+//         root->left = right;
+//         root->right = left;
 //         return root;
 //     }
 // };
