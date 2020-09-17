@@ -1,4 +1,11 @@
-#include "base/pch.h"
+//
+// Created by ZintrulCre on 2020-09-17.
+//
+
+#ifndef LEADGREY_ONLINEJUDGE_LEETCODE_TEST_H
+#define LEADGREY_ONLINEJUDGE_LEETCODE_TEST_H
+
+#include "universal/std-pch.h"
 
 void OjTest()
 {

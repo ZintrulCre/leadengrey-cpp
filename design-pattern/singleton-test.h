@@ -5,8 +5,7 @@
 #ifndef LEADGREY_DESIGNPATTERN_SINGLETONTEST_H
 #define LEADGREY_DESIGNPATTERN_SINGLETONTEST_H
 
-#include "base/pch.h"
-#include "design-pattern/pch.h"
+#include "universal/std-pch.h"
 
 class Foo : public Singleton<Foo>
 {
