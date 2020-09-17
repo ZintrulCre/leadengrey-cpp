@@ -1,7 +1,11 @@
 #include "universal/std-pch.h"
+#include "code-fragment/pch.h"
 
 int main()
 {
-    // OjTest();
+    PromiseTest();
+    PackagedTaskTest();
+    AsyncTest();
+    // TypeidTest();
     return 0;
 }
