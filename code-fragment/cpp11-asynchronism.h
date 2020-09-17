@@ -28,6 +28,7 @@ void PackagedTaskTest()
     int x = 1;
     packaged_task<int(int)> task(PackagedTaskFoo);
     future<int> f = task.get_future();
+    // thread t(PackagedTaskFoo, x);
     thread t(std::ref(task), x); // packaged_task instead of function pointer
     x = f.get();
     t.join();

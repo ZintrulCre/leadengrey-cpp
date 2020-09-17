@@ -3,9 +3,6 @@
 
 int main()
 {
-    PromiseTest();
-    PackagedTaskTest();
-    AsyncTest();
-    // TypeidTest();
+    ThreadTest();
     return 0;
 }
