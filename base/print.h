@@ -66,6 +66,14 @@ void Print(const set<T> &st_set)
     cout << endl;
 }
 
+template<typename T>
+void Print(const unordered_set<T> &st_set)
+{
+    for (auto &val : st_set)
+        cout << val << ' ';
+    cout << endl;
+}
+
 // void Print(ListNode *head) {
 //     while (head) {
 //         std::cout << head->val << ' ';
