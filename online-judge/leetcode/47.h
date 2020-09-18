@@ -4,7 +4,6 @@
 // #pragma once
 
 // #include "universal/std-pch.h"
-// #include "base/print.h"
 
 // class Solution {
 // public:
@@ -12,39 +11,39 @@
 //         vector<vector<int>> res;
 //         vector<int> curr;
 //         const int n = nums.size();
-//         unordered_set<int> used;
+//         vector<bool> used(n, false);
 //         sort(nums.begin(), nums.end());
 
-//         function<void(int)> Backtracking = [&](int m) -> void
+//         function<void()> Backtracking = [&]() -> void
 //         {
-//             if (m == n)
+//             if (curr.size() == n)
 //             {
 //                 res.push_back(curr);
 //                 return;
 //             }
+            
 //             unique_ptr<int> prev = nullptr;
 //             for (int i = 0; i < n; ++i)
 //             {
 //                 if (prev && *prev == nums[i])
 //                     continue;
 
-//                 if (used.find(i) != used.end())
+//                 if (used.at(i))
 //                     continue;
-//                 auto pair_res = used.insert(i);
-//                 // leadgrey::Print(used);
+//                 used.at(i) = true;
 
 //                 if (!prev)
 //                     prev = make_unique<int>();
 //                 *prev = nums[i];
 //                 curr.emplace_back(nums[i]);
-//                 Backtracking(m + 1);
+//                 Backtracking();
 //                 curr.pop_back();
 
-//                 used.erase(pair_res.first);
+//                 used.at(i) = false;
 //             }
 //         };
 
-//         Backtracking(0);
+//         Backtracking();
 //         return res;
 //     }
 // };
