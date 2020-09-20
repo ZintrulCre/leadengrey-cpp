@@ -11,6 +11,7 @@
 #include "online-judge/leetcode/40.h"
 #include "online-judge/leetcode/47.h"
 #include "online-judge/leetcode/77.h"
+#include "online-judge/leetcode/78.h"
 #include "online-judge/leetcode/79.h"
 #include "online-judge/leetcode/94.h"
 #include "online-judge/leetcode/216.h"
