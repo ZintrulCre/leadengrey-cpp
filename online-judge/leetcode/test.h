@@ -9,23 +9,6 @@
 #include "online-judge/pch.h"
 #include "base/print.h"
 
-void Print(TreeNode *root) {
-    if (!root)
-        return;
-    queue<TreeNode *> que;
-    que.push(root);
-    while (!que.empty()) {
-        auto curr = que.front();
-        cout << curr->val << ' ';
-        que.pop();
-        if (curr->left)
-            que.push(curr->left);
-        if (curr->right)
-            que.push(curr->right);
-    }
-    cout << endl;
-}
-
 void TreeNodeTest()
 {
     TreeNode* a = new TreeNode(3);
@@ -36,16 +19,16 @@ void TreeNodeTest()
     TreeNode* f = new TreeNode(4);
     TreeNode* h = new TreeNode(6);
     a->left = b;
-    b->right = c;
     a->right = d;
+    b->right = c;
     d->left = e;
     e->left = f;
     e->right = h;
 
     Print(a);
     Solution solution;
-    solution.convertBST(a);
-    Print(a);
+    int r = solution.minCameraCover(a);
+    leadgrey::Print(r);
 
 }
 
