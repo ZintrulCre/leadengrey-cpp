@@ -6,7 +6,8 @@
 #define LEADGREY_ASYNCHRONISM_PCH_H
 
 #include "code-fragment/cpp11-asynchronism.h"
-#include "code-fragment/typeid.h"
 #include "code-fragment/thread-test.h"
+#include "code-fragment/typeid.h"
+#include "code-fragment/most-vexing-parse.h"
 
 #endif
