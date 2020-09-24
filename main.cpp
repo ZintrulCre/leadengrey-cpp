@@ -4,7 +4,7 @@
 
 int main()
 {
-    // OjTest();
-    MostVexingParseTest();
+    OjTest();
+    // MostVexingParseTest();
     return 0;
 }
