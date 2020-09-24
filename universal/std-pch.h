@@ -6,10 +6,9 @@
 #define LEADGREY_UNIVERSAL_STDPCH_H
 
 #include <iostream>
+#include <cstdlib>
 #include <cstdint>
 #include <typeinfo>
-#include <limits>
-#include <chrono>
 
 // thread
 #include <thread>
@@ -20,12 +19,15 @@
 #include <algorithm>
 #include <functional>
 #include <memory>
+#include <limits>
+#include <chrono>
 
 // container
 #include <vector>
 #include <list>
 #include <stack>
 #include <queue>
+#include <array>
 #include <map>
 #include <unordered_map>
 #include <set>

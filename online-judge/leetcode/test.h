@@ -26,9 +26,9 @@ void TreeNodeTest()
     e->right = h;
 
     Print(a);
-    Solution solution;
-    int r = solution.minCameraCover(a);
-    leadgrey::Print(r);
+    // Solution solution;
+    // int r = solution.minCameraCover(a);
+    // leadgrey::Print(r);
 
 }
 

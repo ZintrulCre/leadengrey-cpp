@@ -1,10 +1,10 @@
 #include "universal/std-pch.h"
 #include "online-judge/pch.h"
-#include "code-fragment/pch.h"
+#include "test-case/pch.h"
 
 int main()
 {
-    OjTest();
-    // MostVexingParseTest();
-    return 0;
+    // OjTest();
+    // AddressSanitizerTest();
+    MemFnTest();
 }
