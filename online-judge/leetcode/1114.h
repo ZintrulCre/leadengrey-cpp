@@ -7,25 +7,27 @@
 #include "universal/std-pch.h"
 
 class Foo {
-    mutex mtx_1, mtx_2;
-    unique_lock<mutex> lock_1, lock_2;
+    condition_variable cv;
+    mutex mtx;
+    int k = 0;
 public:
-    Foo() : lock_1(mtx_1, try_to_lock), lock_2(mtx_2, try_to_lock) {
-    }
-
     void first(function<void()> printFirst) {
         printFirst();
-        lock_1.unlock();
+        k = 1;
+        cv.notify_all();
     }
 
     void second(function<void()> printSecond) {
-        lock_guard<mutex> guard(mtx_1);
+        unique_lock<mutex> lock(mtx);
+        cv.wait(lock, [this](){ return k == 1; });
         printSecond();
-        lock_2.unlock();
+        k = 2;
+        cv.notify_one();
     }
 
     void third(function<void()> printThird) {
-        lock_guard<mutex> guard(mtx_2);
+        unique_lock<mutex> lock(mtx);
+        cv.wait(lock, [this](){ return k == 2; });
         printThird();
     }
 };
