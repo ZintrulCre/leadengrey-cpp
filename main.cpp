@@ -1,10 +1,11 @@
 #include "universal/std-pch.h"
-#include "online-judge/pch.h"
-// #include "test-case/pch.h"
+// #include "online-judge/pch.h"
+#include "test-case/pch.h"
 
 int main()
 {
-    OjTest();
+    // OjTest();
     // AddressSanitizerTest();
+    UniquePointerFoo();
     // MemFnTest();
 }

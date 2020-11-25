@@ -1,9 +1,3 @@
-
-// Created by ZintrulCre on 2020-09-17.
-
-
-#pragma once
-
 #include "universal/std-pch.h"
 
 class Foo {
