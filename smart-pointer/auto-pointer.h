@@ -12,50 +12,50 @@ class AutoPointer
 {
 public:
     // constructor
-    explicit AutoPointer(T* t = nullptr) noexcept : ptr(t) { std::cout << "AutoPointer " << this << " constructed." << std::endl; }
+    explicit AutoPointer(T* t = nullptr) noexcept : ptr_(t) { std::cout << "AutoPointer::Constructor " << this << std::endl; }
 
     // copy-ctor
-    AutoPointer(AutoPointer<T>& other) noexcept : ptr(other.release()) { std::cout << "AutoPointer " << this << " copied." << std::endl; }
+    AutoPointer(AutoPointer<T>& other) noexcept : ptr_(other.release()) { std::cout << "AutoPointer::Copyctor " << this << std::endl; }
 
     // assignment operator
     AutoPointer<T>& operator=(AutoPointer<T>& other)
     {
-        std::cout << "AutoPointer " << this << " assigned." << std::endl;
         reset(other.release());
+        std::cout << "AutoPointer::Assignment " << this << std::endl;
         return *this;
     }
 
     // destructor
     ~AutoPointer() noexcept
     {
-        delete ptr;
-        std::cout << "AutoPointer " << this << " destructed." << std::endl;
+        delete ptr_;
+        std::cout << "AutoPointer::Destructor " << this << std::endl;
     }
 
-    T& operator*() noexcept { return *ptr; }
+    T& operator*() noexcept { return *ptr_; }
 
-    T* operator->() const noexcept { return ptr; }
+    T* operator->() const noexcept { return ptr_; }
 
-    T* get() const noexcept { return ptr; }
+    T* get() const noexcept { return ptr_; }
 
     T* release() noexcept
     {
-        T* ptr_ret = ptr;
-        ptr = nullptr;
+        T* ptr_ret = ptr_;
+        ptr_ = nullptr;
         return ptr_ret;
     }
 
     void reset(T* ptr_para) noexcept
     {
-        if (ptr != ptr_para)
+        if (ptr_ != ptr_para)
         {
-            delete ptr;
-            ptr = ptr_para;
+            delete ptr_;
+            ptr_ = ptr_para;
         }
     }
 
 private:
-    T *ptr;
+    T *ptr_;
 };
 
 #endif

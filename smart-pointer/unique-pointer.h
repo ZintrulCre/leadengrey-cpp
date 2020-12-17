@@ -7,90 +7,79 @@
 
 #include "universal/std-pch.h"
 
-template<typename ElementType, typename DeleterType = std::default_delete<ElementType>>
-class UniquePointer {
+struct DefaultDeleter
+{
+    template<typename T>
+    void operator()(T* p) const
+    {
+        static_assert(sizeof(p) > 0, "can't delete pointer to incomplete type");
+        delete p;
+    }
+};
+
+template<typename ElementType, typename DeleterType = DefaultDeleter>
+class UniquePointer
+{
 public:
     // constructors
-    constexpr UniquePointer() noexcept : ptr_() { std::cout << "UniquePointer " << this << " constructed." << std::endl; }
-    constexpr UniquePointer(ElementType* ptr) noexcept : ptr_(ptr) { std::cout << "UniquePointer " << this << " constructed." << std::endl; }
+    UniquePointer() noexcept : ptr_(nullptr) { std::cout << "UniquePointer::Constructor " << this << std::endl; }
+    explicit UniquePointer(ElementType* p) noexcept : ptr_(p) { std::cout << "UniquePointer::Constructor " << this << std::endl; }
+    UniquePointer(ElementType* p, DeleterType d) noexcept : ptr_(p), deleter_(d) { std::cout << "UniquePointer::Constructor " << this << std::endl; }
 
     // move-ctor
-    constexpr UniquePointer(T* t) noexcept : t_(t.release()) { std::cout << "UniquePointer " << this << " moved." << std::endl; }
+    UniquePointer(UniquePointer<ElementType, DeleterType>&& other) noexcept : ptr_(other.release()), deleter_(std::move(other.deleter_)) { std::cout << "UniquePointer::Move-ctor " << this << std::endl; }
+    // move assignment operator
+    UniquePointer<ElementType, DeleterType>& operator=(UniquePointer<ElementType, DeleterType>&& other) noexcept
+    {
+        ptr_ = other.release();
+        deleter_ = std::move(other.deleter_);
+        std::cout << "UniquePointer::MoveAssignment " << this << std::endl;
+        return *this;
+    }
 
     // copy-ctor
-    UniquePointer(UniquePointer<T>& other) noexcept = delete;
-
+    UniquePointer(UniquePointer<ElementType, DeleterType>& other) noexcept = delete;
     // assignment operator
-    UniquePointer<T>& operator=(UniquePointer<T>& other) = delete;
+    UniquePointer<ElementType, DeleterType>& operator=(UniquePointer<ElementType, DeleterType>& other) = delete;
 
     // destructor
     ~UniquePointer() noexcept
     {
-        if (t_)
+        if (ptr_)
         {
-            get_deleter()(ptr);
-            t_ = nullptr;
+            get_deleter()(ptr_);
+            ptr_ = nullptr;
         }
-        std::cout << "UniquePointer " << this << " destructed." << std::endl;
+        std::cout << "UniquePointer::Destructor " << this << std::endl;
     }
 
-    T& operator*() noexcept { return *ptr; }
+    ElementType& operator*() noexcept { return *ptr_; }
 
-    T* operator->() const noexcept { return ptr; }
+    ElementType* operator->() const noexcept { return ptr_; }
 
-    T* get() const noexcept { return ptr; }
+    ElementType* get() const noexcept { return ptr_; }
 
-    T* release() noexcept
+    const DeleterType& get_deleter() const noexcept { return deleter_; }
+
+    ElementType* release() noexcept
     {
-        T* ptr_ret = ptr;
-        ptr = nullptr;
-        return ptr_ret;
+        ElementType* ret = nullptr;
+        std::swap(ptr_, ret);
+        return ret;
     }
 
-    void reset(T* ptr_para) noexcept
+    void reset(ElementType* p) noexcept
     {
-        if (ptr != ptr_para)
+        if (ptr_ != p)
         {
-            delete ptr;
-            ptr = ptr_para;
+            delete ptr_;
+            ptr_ = p;
         }
     }
 
 private:
-    ElementType* ptr_ = nullptr;
+    ElementType* ptr_;
+    DeleterType deleter_;
 };
-
-void Foo()
-{
-    // Object<int>* obj_ptr = new Object<int>(6);
-    // obj_ptr->Print();
-
-    // UniquePointer<Object<int>> obj_ptr(new Object<int>(6));
-    // (*obj_ptr).Set(5);
-    // (*obj_ptr).Print();
-    // obj_ptr->Set(4);
-    // obj_ptr->Print();
-
-    // UniquePointer<Object<int>> p1(new Object<int>(6));
-    // UniquePointer<Object<int>> p2(p1);
-    // if (p2.get()) { cout << "p2: "; p2->Print(); }
-    // if (p1.get()) { cout << "p1: "; p1->Print(); }
-
-    // UniquePointer<Object<int>> p3(new Object<int>(6));
-    // UniquePointer<Object<int>> p4;
-    // p4 = p3;
-    // cout << "p4: "; p4->Print();
-    // cout << "p3: "; p3->Print();
-
-    // Object<int>* obj_ptr = new Object<int>(6);
-    // UniquePointer<Object<int>> p1(obj_ptr);
-    // UniquePointer<Object<int>> p2(obj_ptr);
-}
-
-int main()
-{
-    Foo();
-    return 0;
-}
 
 #endif

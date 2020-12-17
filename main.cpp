@@ -6,6 +6,7 @@ int main()
 {
     // OjTest();
     // AddressSanitizerTest();
-    UniquePointerFoo();
+    AutoPointerFoo();
+    // UniquePointerFoo();
     // MemFnTest();
 }
