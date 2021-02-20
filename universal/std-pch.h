@@ -14,6 +14,7 @@
 #include <thread>
 #include <mutex>
 #include <future>
+#include <atomic>
 
 // stl
 #include <algorithm>
