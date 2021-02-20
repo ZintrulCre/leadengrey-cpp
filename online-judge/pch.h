@@ -23,6 +23,7 @@
 // #include "online-judge/leetcode/637.h"
 // #include "online-judge/leetcode/968.h"
 // #include "online-judge/leetcode/1114.h"
+#include "online-judge/leetcode/1115.h"
 #include "online-judge/leetcode/test.h"
 
 #endif

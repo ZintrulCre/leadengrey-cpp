@@ -12,5 +12,6 @@
 #include "test-case/boost-typeid.h"
 #include "test-case/most-vexing-parse.h"
 #include "test-case/address-sanitizer-test.h"
+#include "test-case/smart-pointer.h"
 
 #endif

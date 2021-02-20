@@ -2,8 +2,6 @@
 // Created by ZintrulCre on 2020-09-22.
 //
 
-#pragma once
-
 #include "universal/std-pch.h"
 #include "online-judge/pch.h"
 

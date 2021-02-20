@@ -1,5 +1,3 @@
-#pragma once
-
 #include "universal/std-pch.h"
 #include "online-judge/pch.h"
 

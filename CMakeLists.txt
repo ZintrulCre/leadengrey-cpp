@@ -2,16 +2,17 @@ cmake_minimum_required(VERSION 3.16.3)
 
 project(leadgrey)
 
-
 # compile
 set(CMAKE_CXX_COMPILER "g++")
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
-set(CMAKE_CXX_FLAGS -g -Wall -Wextra -Werror)
+set(CMAKE_CXX_FLAGS_DEBUG "-g")
+set(CMAKE_CXX_FLAGS -Wall -Wextra -Werror)
 # lib
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -pthread)
 # sanitizer
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer)
+
 string(REPLACE ";" " " CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 message(STATUS "CMAKE_CXX_FLAGS: " ${CMAKE_CXX_FLAGS})
 

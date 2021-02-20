@@ -1,5 +1,3 @@
-#pragma once
-
 #include "universal/std-pch.h"
 
 class Solution {
