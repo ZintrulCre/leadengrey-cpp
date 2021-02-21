@@ -7,16 +7,6 @@
 
 #include "universal/std-pch.h"
 
-struct DefaultDeleter
-{
-    template<typename T>
-    void operator()(T* p) const
-    {
-        static_assert(sizeof(p) > 0, "can't delete pointer to incomplete type");
-        delete p;
-    }
-};
-
 template<typename ElementType, typename DeleterType = DefaultDeleter>
 class UniquePointer
 {
@@ -31,9 +21,9 @@ public:
     // move assignment operator
     UniquePointer<ElementType, DeleterType>& operator=(UniquePointer<ElementType, DeleterType>&& other) noexcept
     {
+        std::cout << "UniquePointer::MoveAssignment " << this << std::endl;
         ptr_ = other.release();
         deleter_ = std::move(other.deleter_);
-        std::cout << "UniquePointer::MoveAssignment " << this << std::endl;
         return *this;
     }
 
@@ -45,12 +35,12 @@ public:
     // destructor
     ~UniquePointer() noexcept
     {
+        std::cout << "UniquePointer::Destructor " << this << std::endl;
         if (ptr_)
         {
             get_deleter()(ptr_);
             ptr_ = nullptr;
         }
-        std::cout << "UniquePointer::Destructor " << this << std::endl;
     }
 
     ElementType& operator*() noexcept { return *ptr_; }

@@ -6,29 +6,26 @@
 #define LEADGREY_SMARTPOINTER_SHAREDPOINTER_H
 
 #include "universal/std-pch.h"
-
-struct DefaultDeleter
-{
-    template<typename T>
-    void operator()(T* p) const
-    {
-        static_assert(sizeof(p) > 0, "can't delete pointer to incomplete type");
-        delete p;
-    }
-};
+#include "smart-pointer/pch.h"
 
 template<typename ElementType, typename DeleterType = DefaultDeleter>
 class SharedPointer
 {
 public:
     // constructors
-    SharedPointer() noexcept : ptr_(nullptr), ref_count_(nullptr) { std::cout << "SharedPointer::Constructor " << this << std::endl; }
-    explicit SharedPointer(ElementType* p) noexcept : ptr_(p), ref_count_(new int(1)) { std::cout << "SharedPointer::Constructor " << this << std::endl; }
-    SharedPointer(ElementType* p, DeleterType d) noexcept : ptr_(p), ref_count_(new int(1)), deleter_(d) { std::cout << "SharedPointer::Constructor " << this << std::endl; }
+    SharedPointer() noexcept : ptr_(nullptr), ref_count_(nullptr), deleter_(nullptr), mutex_(nullptr) { std::cout << "SharedPointer::Constructor " << this << std::endl; }
+    explicit SharedPointer(ElementType* p) noexcept : ptr_(p), ref_count_(new int(1)), deleter_(new DeleterType()), mutex_(new mutex()) { std::cout << "SharedPointer::Constructor " << this << std::endl; }
+    SharedPointer(ElementType* p, DeleterType *d) noexcept : ptr_(p), ref_count_(new int(1)), deleter_(d), mutex_(new mutex()) { std::cout << "SharedPointer::Constructor " << this << std::endl; }
+    explicit SharedPointer(const WeakPointer<ElementType, DeleterType>& wp) noexcept : ptr_(wp.ptr_), ref_count_(wp.ref_count_), deleter_(wp.deleter_), mutex_(wp.mutex_)
+    {
+        std::cout << "SharedPointer::Constructor " << this << std::endl;
+        IncreaseReferenceCount();
+    }
 
     // copy-ctor
-    SharedPointer(SharedPointer<ElementType>& other) noexcept : ptr_(other.ptr_), ref_count_(other.ref_count_), deleter_(other.deleter_)
+    SharedPointer(const SharedPointer<ElementType>& other) noexcept : ptr_(other.ptr_), ref_count_(other.ref_count_), deleter_(other.deleter_), mutex_(other.mutex_)
     {
+        std::cout << "SharedPointer::Copy-ctor " << this << std::endl;
         IncreaseReferenceCount();
     }
 
@@ -37,78 +34,80 @@ public:
     {
         if (ptr_ != other.ptr_)
         {
-            release();
+            Release();
             ptr_ = other.ptr_;
             ref_count_ = other.ref_count_;
             mutex_ = other.mutex_;
             deleter_ = other.deleter_;
             IncreaseReferenceCount();
         }
-    }
-
-    // move-ctor
-    SharedPointer(SharedPointer<ElementType, DeleterType>&& other) noexcept : ptr_(other.release()), deleter_(std::move(other.deleter_)) { std::cout << "SharedPointer::Move-ctor " << this << std::endl; }
-    // move assignment operator
-    SharedPointer<ElementType, DeleterType>& operator=(SharedPointer<ElementType, DeleterType>&& other) noexcept
-    {
-        ptr_ = other.release();
-        deleter_ = std::move(other.deleter_);
-        std::cout << "SharedPointer::MoveAssignment " << this << std::endl;
         return *this;
     }
-
-    // copy-ctor
-    SharedPointer(SharedPointer<ElementType, DeleterType>& other) noexcept = delete;
-    // assignment operator
-    SharedPointer<ElementType, DeleterType>& operator=(SharedPointer<ElementType, DeleterType>& other) = delete;
 
     // destructor
     ~SharedPointer() noexcept
     {
-        if (ptr_)
-        {
-            get_deleter()(ptr_);
-            ptr_ = nullptr;
-        }
         std::cout << "SharedPointer::Destructor " << this << std::endl;
+        Release();
     }
+
+    void Swap(SharedPointer<ElementType, DeleterType>& other)
+    {
+        std::swap(ptr_, other.ptr_);
+        std::swap(ref_count_, other.ref_count_);
+        std::swap(deleter_, other.deleter_);
+        std::swap(mutex_, other.mutex_);
+    }
+
+    void Reset() { SharedPointer().Swap(*this); }
+    void Reset(ElementType* p, DeleterType* d = nullptr) { SharedPointer(p, d).Swap(*this); }
+
+    int UseCount() { return ref_count_ ? *ref_count_ : 0; }
 
     ElementType& operator*() noexcept { return *ptr_; }
 
     ElementType* operator->() const noexcept { return ptr_; }
 
-    ElementType* get() const noexcept { return ptr_; }
+    ElementType* Get() const noexcept { return ptr_; }
 
-    const DeleterType& get_deleter() const noexcept { return deleter_; }
+    const DeleterType& GetDeleter() const noexcept { return *deleter_; }
 
-    ElementType* release() noexcept
-    {
-        ElementType* ret = nullptr;
-        std::swap(ptr_, ret);
-        return ret;
-    }
-
-    void reset(ElementType* p) noexcept
-    {
-        if (ptr_ != p)
-        {
-            delete ptr_;
-            ptr_ = p;
-        }
-    }
-
+    ElementType* ptr_;
+    int *ref_count_;
+    DeleterType* deleter_;
+	mutex* mutex_;
 private:
+    void Release()
+    {
+        if (!ptr_)
+            return;
+        bool delete_flag = false;
+        mutex_->lock();
+        if (--(*ref_count_) == 0)
+        {
+            GetDeleter()(ptr_);
+            delete ref_count_;
+            delete deleter_;
+            delete_flag = true;
+        }
+        mutex_->unlock();
+        
+        if (delete_flag)
+        {
+            delete mutex_;
+        }
+        
+    }
+
 	void IncreaseReferenceCount()
 	{
+        if (!ptr_)
+            return;
 		mutex_->lock();
-		++(*ref_count_);
+        ++(*ref_count_);
 		mutex_->unlock();
 	}
 
-    int *ref_count_;
-    ElementType* ptr_;
-	mutex* mutex_;
-    DeleterType deleter_;
 };
 
 #endif

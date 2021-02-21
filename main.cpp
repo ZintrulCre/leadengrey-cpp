@@ -4,9 +4,5 @@
 
 int main()
 {
-    // OjTest();
-    // AddressSanitizerTest();
-    AutoPointerFoo();
-    // UniquePointerFoo();
-    // MemFnTest();
+    WeakPointerFoo();
 }
