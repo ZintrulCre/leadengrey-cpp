@@ -34,4 +34,4 @@ aux_source_directory(design-pattern/ DESIGN_PATTERN_SOURCES)
 aux_source_directory(online-judge/leetcode/ LEETCODE_SOURCES)
 
 
-add_executable(leadgrey ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${LEETCODE_SOURCES})
+add_executable(smart-pointer ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${LEETCODE_SOURCES})

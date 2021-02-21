@@ -4,5 +4,8 @@
 
 int main()
 {
-    WeakPointerFoo();
+    // AutoPointerFoo();
+    // UniquePointerFoo();
+    // SharedPointerFoo();
+    // WeakPointerFoo();
 }

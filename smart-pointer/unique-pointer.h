@@ -17,12 +17,12 @@ public:
     UniquePointer(ElementType* p, DeleterType d) noexcept : ptr_(p), deleter_(d) { std::cout << "UniquePointer::Constructor " << this << std::endl; }
 
     // move-ctor
-    UniquePointer(UniquePointer<ElementType, DeleterType>&& other) noexcept : ptr_(other.release()), deleter_(std::move(other.deleter_)) { std::cout << "UniquePointer::Move-ctor " << this << std::endl; }
+    UniquePointer(UniquePointer<ElementType, DeleterType>&& other) noexcept : ptr_(other.Release()), deleter_(std::move(other.deleter_)) { std::cout << "UniquePointer::Move-ctor " << this << std::endl; }
     // move assignment operator
     UniquePointer<ElementType, DeleterType>& operator=(UniquePointer<ElementType, DeleterType>&& other) noexcept
     {
         std::cout << "UniquePointer::MoveAssignment " << this << std::endl;
-        ptr_ = other.release();
+        ptr_ = other.Release();
         deleter_ = std::move(other.deleter_);
         return *this;
     }
@@ -38,7 +38,7 @@ public:
         std::cout << "UniquePointer::Destructor " << this << std::endl;
         if (ptr_)
         {
-            get_deleter()(ptr_);
+            GetDeleter()(ptr_);
             ptr_ = nullptr;
         }
     }
@@ -47,18 +47,18 @@ public:
 
     ElementType* operator->() const noexcept { return ptr_; }
 
-    ElementType* get() const noexcept { return ptr_; }
+    ElementType* Get() const noexcept { return ptr_; }
 
-    const DeleterType& get_deleter() const noexcept { return deleter_; }
+    const DeleterType& GetDeleter() const noexcept { return deleter_; }
 
-    ElementType* release() noexcept
+    ElementType* Release() noexcept
     {
         ElementType* ret = nullptr;
         std::swap(ptr_, ret);
         return ret;
     }
 
-    void reset(ElementType* p) noexcept
+    void Reset(ElementType* p) noexcept
     {
         if (ptr_ != p)
         {

@@ -71,12 +71,7 @@ public:
     ElementType* Get() const noexcept { return ptr_; }
 
     const DeleterType& GetDeleter() const noexcept { return *deleter_; }
-
-    ElementType* ptr_;
-    int *ref_count_;
-    DeleterType* deleter_;
-	mutex* mutex_;
-private:
+    
     void Release()
     {
         if (!ptr_)
@@ -107,7 +102,11 @@ private:
         ++(*ref_count_);
 		mutex_->unlock();
 	}
-
+    
+    ElementType* ptr_;
+    int *ref_count_;
+    DeleterType* deleter_;
+	mutex* mutex_;
 };
 
 #endif
