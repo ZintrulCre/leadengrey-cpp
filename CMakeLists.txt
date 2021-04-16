@@ -12,6 +12,8 @@ set(CMAKE_CXX_FLAGS -Wall -Wextra -Werror)
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -pthread)
 # sanitizer
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer)
+# diagnostics
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fdiagnostics-color)
 
 string(REPLACE ";" " " CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}")
 message(STATUS "CMAKE_CXX_FLAGS: " ${CMAKE_CXX_FLAGS})
