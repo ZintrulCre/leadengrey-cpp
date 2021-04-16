@@ -8,5 +8,6 @@ int main()
     // AddressSanitizerTest();
     // AutoPointerFoo();
     // UniquePointerFoo();
-    // MemFnTest();
+    // SharedPointerFoo();
+    // WeakPointerFoo();
 }

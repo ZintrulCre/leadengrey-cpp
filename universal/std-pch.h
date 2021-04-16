@@ -15,6 +15,7 @@
 #include <mutex>
 #include <condition_variable>
 #include <future>
+#include <atomic>
 
 // stl
 #include <algorithm>
