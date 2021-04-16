@@ -2,8 +2,8 @@
 // Created by ZintrulCre on 2020-11-25.
 //
 
-#ifndef LEADGREY_TESTCASE_SMARTPOINTER_H
-#define LEADGREY_TESTCASE_SMARTPOINTER_H
+#ifndef LEADENGREY_TESTCASE_SMARTPOINTER_H
+#define LEADENGREY_TESTCASE_SMARTPOINTER_H
 
 #include "smart-pointer/pch.h"
 

@@ -2,8 +2,8 @@
 // Created by ZintrulCre on 2020-09-12.
 //
 
-#ifndef LEADGREY_ONLINEJUDGE_PCH_H
-#define LEADGREY_ONLINEJUDGE_PCH_H
+#ifndef LEADENGREY_ONLINEJUDGE_PCH_H
+#define LEADENGREY_ONLINEJUDGE_PCH_H
 
 #include "online-judge/leetcode/data-structure.h"
 // #include "online-judge/leetcode/37.h"

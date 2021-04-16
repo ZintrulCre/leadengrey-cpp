@@ -24,7 +24,7 @@ public:
             }
 
             res.push_back(node->val);
-            leadgrey::Print(res);
+            leadengrey::Print(res);
             if (node->right)
                 stk.push(node->right);
         }

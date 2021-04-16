@@ -2,8 +2,8 @@
 // Created by ZintrulCre on 2020-09-24.
 //
 
-#ifndef LEADGREY_SORT_QUICKSORT_H
-#define LEADGREY_SORT_QUICKSORT_H
+#ifndef LEADENGREY_SORT_QUICKSORT_H
+#define LEADENGREY_SORT_QUICKSORT_H
 
 template<typename T>
 void QuickSort(vector<T>& v, int left, int right)

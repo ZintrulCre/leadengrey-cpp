@@ -2,8 +2,8 @@
 // Created by ZintrulCre on 2021-02-20.
 //
 
-#ifndef LEADGREY_SMARTPOINTER_DELETER_H
-#define LEADGREY_SMARTPOINTER_DELETER_H
+#ifndef LEADENGREY_SMARTPOINTER_DELETER_H
+#define LEADENGREY_SMARTPOINTER_DELETER_H
 
 #include "universal/std-pch.h"
 

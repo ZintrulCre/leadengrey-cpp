@@ -2,10 +2,10 @@
 // Created by ZintrulCre on 2020-09-08.
 //
 
-#ifndef LEADGREY_BASE_PRINT_H
-#define LEADGREY_BASE_PRINT_H
+#ifndef LEADENGREY_BASE_PRINT_H
+#define LEADENGREY_BASE_PRINT_H
 
-namespace leadgrey
+namespace leadengrey
 {
 
 template<typename T>

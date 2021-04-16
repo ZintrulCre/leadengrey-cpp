@@ -2,8 +2,8 @@
 // Created by ZintrulCre on 2020-09-17.
 //
 
-#ifndef LEADGREY_TESTCASE_PCH_H
-#define LEADGREY_TESTCASE_PCH_H
+#ifndef LEADENGREY_TESTCASE_PCH_H
+#define LEADENGREY_TESTCASE_PCH_H
 
 // #include "test-case/cpp11-asynchronism.h"
 // #include "test-case/cpp11-thread.h"

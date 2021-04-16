@@ -2,10 +2,10 @@
 // Created by ZintrulCre on 2020-09-08.
 //
 
-#ifndef LEADGREY_BASE_MATH_H
-#define LEADGREY_BASE_MATH_H
+#ifndef LEADENGREY_BASE_MATH_H
+#define LEADENGREY_BASE_MATH_H
 
-namespace leadgrey
+namespace leadengrey
 {
 
 template<typename ValueType>
@@ -54,6 +54,6 @@ ValueType Minus(const ValueType &value, const ValueTypes &...other_values)
     return value - difference;
 }
 
-} // namespace LeadGrey
+} // namespace leadengrey
 
 #endif

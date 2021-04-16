@@ -2,8 +2,8 @@
 // Created by ZintrulCre on 2020-09-17.
 //
 
-#ifndef LEADGREY_UNIVERSAL_STDPCH_H
-#define LEADGREY_UNIVERSAL_STDPCH_H
+#ifndef LEADENGREY_UNIVERSAL_STDPCH_H
+#define LEADENGREY_UNIVERSAL_STDPCH_H
 
 #include <iostream>
 #include <cstdlib>

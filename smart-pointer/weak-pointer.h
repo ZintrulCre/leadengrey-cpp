@@ -2,8 +2,8 @@
 // Created by ZintrulCre on 2021-02-20.
 //
 
-#ifndef LEADGREY_SMARTPOINTER_WEAKPOINTER_H
-#define LEADGREY_SMARTPOINTER_WEAKPOINTER_H
+#ifndef LEADENGREY_SMARTPOINTER_WEAKPOINTER_H
+#define LEADENGREY_SMARTPOINTER_WEAKPOINTER_H
 
 #include "universal/std-pch.h"
 #include "smart-pointer/pch.h"

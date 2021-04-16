@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13.4)
 
-project(leadgrey)
+project(leaden-grey)
 
 # compile
 set(CMAKE_CXX_COMPILER "g++")
@@ -36,4 +36,4 @@ aux_source_directory(design-pattern/ DESIGN_PATTERN_SOURCES)
 aux_source_directory(online-judge/leetcode/ LEETCODE_SOURCES)
 
 
-add_executable(smart-pointer ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${LEETCODE_SOURCES})
+add_executable(leaden-grey ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${LEETCODE_SOURCES})

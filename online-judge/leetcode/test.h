@@ -2,8 +2,8 @@
 // Created by ZintrulCre on 2020-09-17.
 //
 
-#ifndef LEADGREY_ONLINEJUDGE_LEETCODE_TEST_H
-#define LEADGREY_ONLINEJUDGE_LEETCODE_TEST_H
+#ifndef LEADENGREY_ONLINEJUDGE_LEETCODE_TEST_H
+#define LEADENGREY_ONLINEJUDGE_LEETCODE_TEST_H
 
 #include "universal/std-pch.h"
 #include "online-judge/pch.h"
@@ -28,7 +28,7 @@ void TreeNodeTest()
     Print(a);
     // Solution solution;
     // int r = solution.minCameraCover(a);
-    // leadgrey::Print(r);
+    // leadengrey::Print(r);
 
 }
 
@@ -50,7 +50,7 @@ void OjTest()
     // vector<int> test{4,2,1};
     // Solution solution;
     // vector<vector<int>> res = solution.subsets(test);
-    // leadgrey::Print(res);
+    // leadengrey::Print(res);
 
 
     int N;
