@@ -36,6 +36,6 @@ include_directories(./)
 aux_source_directory(. DIR_SOURCES)
 aux_source_directory(design-pattern/ DESIGN_PATTERN_SOURCES)
 aux_source_directory(online-judge/leetcode/ LEETCODE_SOURCES)
+aux_source_directory(smart-pointer/ SMARTPOINTER_SOURCES)
 
-
-add_executable(leaden-grey ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${LEETCODE_SOURCES})
+add_executable(leaden-grey ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${LEETCODE_SOURCES} ${SMARTPOINTER_SOURCES})
