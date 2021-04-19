@@ -8,8 +8,10 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_FLAGS_DEBUG "-g")
 set(CMAKE_CXX_FLAGS -Wall -Wextra -Werror)
+# disable Vla
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -Wvla)
 # optimization
-set(CMAKE_CXX_FLAGS -O0)
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -O0)
 # lib
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -pthread)
 # sanitizer

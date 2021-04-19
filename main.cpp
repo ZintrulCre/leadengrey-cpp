@@ -1,13 +1,18 @@
 #include "universal/std-pch.h"
-#include "online-judge/pch.h"
-#include "test-case/pch.h"
+#include "online-judge/online-judge.h"
+#include "test-case/test-case.h"
+#include "smart-pointer/smart-pointer.h"
 
 int main()
 {
-    OjTest();
+    // online-judge
+    // OnlineJudge();
+
+    // test-case
+    // TestCase();
     // AddressSanitizerTest();
-    // AutoPointerFoo();
-    // UniquePointerFoo();
-    // SharedPointerFoo();
-    // WeakPointerFoo();
+
+    // smart-pointer
+    // SmartPointer();
+
 }

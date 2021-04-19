@@ -2,10 +2,27 @@
 // Created by ZintrulCre on 2020-11-25.
 //
 
-#ifndef LEADENGREY_TESTCASE_SMARTPOINTER_H
-#define LEADENGREY_TESTCASE_SMARTPOINTER_H
+#ifndef LEADENGREY_SMARTPOINTER_SMARTPOINTER_H
+#define LEADENGREY_SMARTPOINTER_SMARTPOINTER_H
 
-#include "smart-pointer/pch.h"
+#include "smart-pointer/auto-pointer.h"
+#include "smart-pointer/unique-pointer.h"
+#include "smart-pointer/weak-pointer.h"
+#include "smart-pointer/shared-pointer.h"
+#include "smart-pointer/test.h"
+
+void AutoPointerFoo();
+void UniquePointerFoo();
+void SharedPointerFoo();
+void WeakPointerFoo();
+
+void SmartPointer()
+{
+    // AutoPointerFoo();
+    // UniquePointerFoo();
+    SharedPointerFoo();
+    // WeakPointerFoo();
+}
 
 template<typename T>
 class Object

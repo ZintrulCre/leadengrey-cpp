@@ -6,6 +6,7 @@
 #define LEADENGREY_SMARTPOINTER_UNIQUEPOINTER_H
 
 #include "universal/std-pch.h"
+#include "smart-pointer/deleter.h"
 
 template<typename ElementType, typename DeleterType = DefaultDeleter>
 class UniquePointer

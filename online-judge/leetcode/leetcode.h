@@ -6,8 +6,27 @@
 #define LEADENGREY_ONLINEJUDGE_LEETCODE_TEST_H
 
 #include "universal/std-pch.h"
-#include "online-judge/pch.h"
 #include "base/print.h"
+
+#include "online-judge/leetcode/data-structure.h"
+// #include "online-judge/leetcode/37.h"
+// #include "online-judge/leetcode/39.h"
+// #include "online-judge/leetcode/40.h"
+// #include "online-judge/leetcode/47.h"
+// #include "online-judge/leetcode/77.h"
+// #include "online-judge/leetcode/78.h"
+// #include "online-judge/leetcode/79.h"
+// #include "online-judge/leetcode/94.h"
+// #include "online-judge/leetcode/216.h"
+// #include "online-judge/leetcode/226.h"
+// #include "online-judge/leetcode/235.h"
+// #include "online-judge/leetcode/404.h"
+// #include "online-judge/leetcode/538.h"
+// #include "online-judge/leetcode/617.h"
+// #include "online-judge/leetcode/637.h"
+// #include "online-judge/leetcode/968.h"
+// #include "online-judge/leetcode/1114.h"
+// #include "online-judge/leetcode/1115.h"
 
 void TreeNodeTest()
 {
@@ -40,7 +59,7 @@ void TreeNodeTest()
 //     foo.third();
 // }
 
-void OjTest()
+void LeetCode()
 {
     // ConcurrencyTest();
     // TreeNodeTest();
@@ -51,29 +70,6 @@ void OjTest()
     // Solution solution;
     // vector<vector<int>> res = solution.subsets(test);
     // leadengrey::Print(res);
-
-
-    int N;
-    cin >> N;
-    for (int n = 0; n < N; ++n)
-    {
-        int m;
-        cin >> m;
-        vector<int> v(m);
-        int res = 0;
-        for (int i = 0; i < m; ++i)
-        {
-            cin >> v[i];
-            if (v[i] > 0)
-                ++res;
-            else if (v[i] < 0)
-                --res;
-            else
-                res += (res > 0 ? -1 : 1);
-            
-        }
-        cout << (abs(res) <= 1 ? "Yes" : "No") << endl;
-    }
 }
 
 #endif

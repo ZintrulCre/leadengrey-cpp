@@ -6,7 +6,7 @@
 #define LEADENGREY_SMARTPOINTER_WEAKPOINTER_H
 
 #include "universal/std-pch.h"
-#include "smart-pointer/pch.h"
+#include "smart-pointer/deleter.h"
 
 template<typename ElementType, typename DeleterType> class SharedPointer;
 
