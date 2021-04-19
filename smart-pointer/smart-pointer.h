@@ -9,7 +9,6 @@
 #include "smart-pointer/unique-pointer.h"
 #include "smart-pointer/weak-pointer.h"
 #include "smart-pointer/shared-pointer.h"
-#include "smart-pointer/test.h"
 
 void AutoPointerFoo();
 void UniquePointerFoo();
