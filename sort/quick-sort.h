@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-24.
 //
 
-#ifndef LEADENGREY_SORT_QUICKSORT_H
-#define LEADENGREY_SORT_QUICKSORT_H
+#pragma once
 
 template<typename T>
 void QuickSort(vector<T>& v, int left, int right)
@@ -26,4 +25,3 @@ void QuickSort(vector<T>& v)
     QuickSort(v, 0, static_cast<int>(v.size() - 1));
 }
 
-#endif

@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-08.
 //
 
-#ifndef LEADENGREY_BASE_TYPE_H
-#define LEADENGREY_BASE_TYPE_H
+#pragma once
 
 using int8 = int8_t;
 using int16 = int16_t;
@@ -15,4 +14,3 @@ using uint16 = uint16_t;
 using uint32 = uint32_t;
 using uint64 = uint64_t;
 
-#endif

@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-17.
 //
 
-#ifndef LEADENGREY_TESTCASE_TESTCASE_H
-#define LEADENGREY_TESTCASE_TESTCASE_H
+#pragma once
 
 // #include "test-case/vla.h"
 #include "test-case/cpp11-asynchronism.h"
@@ -19,4 +18,3 @@ void TestCase()
     // VlaTest(3);
 }
 
-#endif

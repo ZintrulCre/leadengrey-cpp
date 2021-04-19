@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-11-25.
 //
 
-#ifndef LEADENGREY_SMARTPOINTER_UNIQUEPOINTER_H
-#define LEADENGREY_SMARTPOINTER_UNIQUEPOINTER_H
+#pragma once
 
 #include "universal/std-pch.h"
 #include "smart-pointer/deleter.h"
@@ -73,4 +72,3 @@ private:
     DeleterType deleter_;
 };
 
-#endif

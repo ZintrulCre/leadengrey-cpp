@@ -34,8 +34,9 @@ message(STATUS "output dir: " ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
 include_directories(./)
 # source
 aux_source_directory(. DIR_SOURCES)
-aux_source_directory(design-pattern/ DESIGN_PATTERN_SOURCES)
 aux_source_directory(online-judge/leetcode/ LEETCODE_SOURCES)
 aux_source_directory(smart-pointer/ SMARTPOINTER_SOURCES)
+file(GLOB_RECURSE DESIGN_PATTERN_SOURCES "design-pattern/*.cpp")
+# message(STATUS "DESIGN_PATTERN_SOURCES: " ${DESIGN_PATTERN_SOURCES})
 
 add_executable(leaden-grey ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${LEETCODE_SOURCES} ${SMARTPOINTER_SOURCES})

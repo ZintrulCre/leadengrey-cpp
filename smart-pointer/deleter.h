@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2021-02-20.
 //
 
-#ifndef LEADENGREY_SMARTPOINTER_DELETER_H
-#define LEADENGREY_SMARTPOINTER_DELETER_H
+#pragma once
 
 #include "universal/std-pch.h"
 
@@ -17,4 +16,3 @@ struct DefaultDeleter
     }
 };
 
-#endif

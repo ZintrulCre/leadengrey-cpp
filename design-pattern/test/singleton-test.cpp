@@ -1,11 +1,9 @@
 //
-// Created by ZintrulCre on 2020-09-10.
+// Created by ZintrulCre on 2021-04-19.
 //
 
-#ifndef LEADENGREY_DESIGNPATTERN_SINGLETONTEST_H
-#define LEADENGREY_DESIGNPATTERN_SINGLETONTEST_H
-
-#include "universal/std-pch.h"
+#include "design-pattern/singleton.h"
+#include "design-pattern/test/singleton-test.h"
 
 class Foo : public Singleton<Foo>
 {
@@ -68,5 +66,3 @@ void SingletonTest()
     t1.join();
     t2.join();
 }
-
-#endif

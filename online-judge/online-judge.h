@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-12.
 //
 
-#ifndef LEADENGREY_ONLINEJUDGE_PCH_H
-#define LEADENGREY_ONLINEJUDGE_PCH_H
+#pragma once
 
 #include "online-judge/leetcode/leetcode.h"
 
@@ -35,4 +34,3 @@ void OnlineJudge()
     }
 }
 
-#endif

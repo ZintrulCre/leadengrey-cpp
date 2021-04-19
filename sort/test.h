@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-24.
 //
 
-#ifndef LEADENGREY_SORT_TEST_H
-#define LEADENGREY_SORT_TEST_H
+#pragma once
 
 #include "universal/std-pch.h"
 #include "sort/quick-sort.h"
@@ -17,4 +16,3 @@ void SortTest()
     leadengrey::Print(v.size());
 }
 
-#endif

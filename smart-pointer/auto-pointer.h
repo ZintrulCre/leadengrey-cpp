@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-11-25.
 //
 
-#ifndef LEADENGREY_SMARTPOINTER_AUTOPOINTER_H
-#define LEADENGREY_SMARTPOINTER_AUTOPOINTER_H
+#pragma once
 
 #include "universal/std-pch.h"
 
@@ -58,4 +57,3 @@ private:
     T *ptr_;
 };
 
-#endif

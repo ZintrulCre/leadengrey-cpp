@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-11-25.
 //
 
-#ifndef LEADENGREY_SMARTPOINTER_SMARTPOINTER_H
-#define LEADENGREY_SMARTPOINTER_SMARTPOINTER_H
+#pragma once
 
 #include "smart-pointer/auto-pointer.h"
 #include "smart-pointer/unique-pointer.h"
@@ -16,4 +15,3 @@ void SharedPointerFoo();
 void WeakPointerFoo();
 void SmartPointer();
 
-#endif

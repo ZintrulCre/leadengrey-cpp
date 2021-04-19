@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-17.
 //
 
-#ifndef LEADENGREY_ONLINEJUDGE_LEETCODE_DATASTRUCTURE_H
-#define LEADENGREY_ONLINEJUDGE_LEETCODE_DATASTRUCTURE_H
+#pragma once
 
 #include "universal/std-pch.h"
 
@@ -50,4 +49,3 @@ void Print(TreeNode *root) {
 }
 
 
-#endif

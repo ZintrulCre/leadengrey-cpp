@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-08.
 //
 
-#ifndef LEADENGREY_BASE_PRINT_H
-#define LEADENGREY_BASE_PRINT_H
+#pragma once
 
 namespace leadengrey
 {
@@ -122,4 +121,3 @@ void Print(const unordered_set<T> &st_set)
 
 }
 
-#endif

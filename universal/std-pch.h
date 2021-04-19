@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-17.
 //
 
-#ifndef LEADENGREY_UNIVERSAL_STDPCH_H
-#define LEADENGREY_UNIVERSAL_STDPCH_H
+#pragma once
 
 #include <iostream>
 #include <cstdlib>
@@ -38,4 +37,3 @@
 
 using namespace std;
 
-#endif

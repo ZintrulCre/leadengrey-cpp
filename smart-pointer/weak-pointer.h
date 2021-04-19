@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2021-02-20.
 //
 
-#ifndef LEADENGREY_SMARTPOINTER_WEAKPOINTER_H
-#define LEADENGREY_SMARTPOINTER_WEAKPOINTER_H
+#pragma once
 
 #include "universal/std-pch.h"
 #include "smart-pointer/deleter.h"
@@ -65,4 +64,3 @@ public:
 	mutex* mutex_;
 };
 
-#endif

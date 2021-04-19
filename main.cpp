@@ -2,6 +2,7 @@
 #include "online-judge/online-judge.h"
 #include "test-case/test-case.h"
 #include "smart-pointer/smart-pointer.h"
+#include "design-pattern/design-pattern.h"
 
 int main()
 {
@@ -15,4 +16,6 @@ int main()
     // smart-pointer
     // SmartPointer();
 
+    // design-pattern
+    DesignPatternTest();
 }

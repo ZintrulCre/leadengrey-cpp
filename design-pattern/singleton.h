@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-10.
 //
 
-#ifndef LEADENGREY_DESIGNPATTERN_SINGLETON_H
-#define LEADENGREY_DESIGNPATTERN_SINGLETON_H
+#pragma once
 
 #include "universal/std-pch.h"
 
@@ -99,4 +98,3 @@ protected:
 template<typename T>
 T* EagerSingleton<T>::t_ = new (std::nothrow) T;
 
-#endif

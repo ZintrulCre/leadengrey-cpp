@@ -2,8 +2,7 @@
 // Created by ZintrulCre on 2020-09-08.
 //
 
-#ifndef LEADENGREY_BASE_MATH_H
-#define LEADENGREY_BASE_MATH_H
+#pragma once
 
 namespace leadengrey
 {
@@ -56,4 +55,3 @@ ValueType Minus(const ValueType &value, const ValueTypes &...other_values)
 
 } // namespace leadengrey
 
-#endif
