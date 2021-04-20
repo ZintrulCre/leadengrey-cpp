@@ -1,7 +1,3 @@
-//
-// Created by ZintrulCre on 2021-04-19.
-//
-
 #include "smart-pointer/smart-pointer.h"
 
 void AutoPointerTest();

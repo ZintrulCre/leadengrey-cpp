@@ -1,7 +1,3 @@
-//
-// Created by ZintrulCre on 2021-04-19.
-//
-
 #include "design-pattern/singleton.h"
 #include "design-pattern/test/singleton-test.h"
 

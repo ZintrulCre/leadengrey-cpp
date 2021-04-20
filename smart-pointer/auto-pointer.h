@@ -1,7 +1,3 @@
-//
-// Created by ZintrulCre on 2020-11-25.
-//
-
 #pragma once
 
 #include "include/std.h"

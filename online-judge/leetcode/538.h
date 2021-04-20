@@ -1,7 +1,3 @@
-//
-// Created by ZintrulCre on 2020-09-22.
-//
-
 #include "include/std.h"
 #include "online-judge/pch.h"
 

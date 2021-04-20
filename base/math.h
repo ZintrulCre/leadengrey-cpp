@@ -1,7 +1,3 @@
-//
-// Created by ZintrulCre on 2020-09-08.
-//
-
 #pragma once
 
 namespace leadengrey

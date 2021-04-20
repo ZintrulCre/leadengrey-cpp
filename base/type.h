@@ -1,7 +1,3 @@
-//
-// Created by ZintrulCre on 2020-09-08.
-//
-
 #pragma once
 
 using int8 = int8_t;
