@@ -1,5 +1,4 @@
-
-// Created by ZintrulCre on 2020-09-17.
+#pragma once
 
 #include "include/std.h"
 

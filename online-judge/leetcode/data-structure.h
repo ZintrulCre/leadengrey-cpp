@@ -4,6 +4,7 @@
 
 struct TreeNode
 {
+public:
     int val;
     TreeNode *left;
     TreeNode *right;
@@ -12,7 +13,8 @@ struct TreeNode
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
 
-class Node {
+class Node
+{
 public:
     int val;
     Node* left;
@@ -27,21 +29,4 @@ public:
         : val(_val), left(_left), right(_right), next(_next) {}
 };
 
-void Print(TreeNode *root) {
-    if (!root)
-        return;
-    queue<TreeNode *> que;
-    que.push(root);
-    while (!que.empty()) {
-        auto curr = que.front();
-        cout << curr->val << ' ';
-        que.pop();
-        if (curr->left)
-            que.push(curr->left);
-        if (curr->right)
-            que.push(curr->right);
-    }
-    cout << endl;
-}
-
-
+void Print(TreeNode *root);

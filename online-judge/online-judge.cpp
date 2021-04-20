@@ -1,12 +1,7 @@
-#pragma once
-
 #include "online-judge/online-judge.h"
 
 void OnlineJudge()
 {
-    // leetcode
-    // LeetCode();
-
     int N;
     cin >> N;
     for (int n = 0; n < N; ++n)
@@ -14,19 +9,31 @@ void OnlineJudge()
         int m;
         cin >> m;
         vector<int> v(m);
-        int res = 0;
         for (int i = 0; i < m; ++i)
-        {
             cin >> v[i];
-            if (v[i] > 0)
-                ++res;
-            else if (v[i] < 0)
-                --res;
-            else
-                res += (res > 0 ? -1 : 1);
-            
+        if (m == 2)
+        {
+            cout << (v[0] <= v[1] ? "Yes" : "No") << endl;
+            continue;
         }
-        cout << (abs(res) <= 1 ? "Yes" : "No") << endl;
+        if (v[1] > v[m - 1])
+            swap(v[1], v[m - 1]);
+        if (v[0] > v[m - 2])
+            swap(v[0], v[m - 2]);
+        for (int i = m - 1; i >= 2; --i)
+            if (v[i] > v[i - 2])
+                swap(v[i], v[i - 2]);
+        for (int i = m - 1; i >= 2; --i)
+            if (v[i] > v[i - 2])
+                swap(v[i], v[i - 2]);
+        bool f = true;
+        for (int i = 0; i < m - 1; ++i)
+            if (v[i] > v[i + 1])
+            {
+                f = false;
+                break;
+            }
+        cout << (f ? "Yes" : "No") << endl;
     }
 }
 
