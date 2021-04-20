@@ -1,5 +1,5 @@
-#include "universal/std-pch.h"
-#include "universal/boost-pch.h"
+#include "include/std.h"
+#include "include/boost.h"
 
 void Foo()
 {

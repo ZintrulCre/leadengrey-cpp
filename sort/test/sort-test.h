@@ -4,9 +4,9 @@
 
 #pragma once
 
-#include "universal/std-pch.h"
-#include "sort/quick-sort.h"
+#include "include/std.h"
 #include "base/print.h"
+#include "sort/quick-sort.h"
 
 void SortTest()
 {

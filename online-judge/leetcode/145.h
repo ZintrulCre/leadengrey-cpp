@@ -1,4 +1,4 @@
-#include "universal/std-pch.h"
+#include "include/std.h"
 #include "online-judge/pch.h"
 
 class Solution {

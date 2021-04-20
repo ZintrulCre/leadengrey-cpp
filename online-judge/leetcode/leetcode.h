@@ -4,7 +4,7 @@
 
 #pragma once
 
-#include "universal/std-pch.h"
+#include "include/std.h"
 #include "base/print.h"
 
 #include "online-judge/leetcode/data-structure.h"

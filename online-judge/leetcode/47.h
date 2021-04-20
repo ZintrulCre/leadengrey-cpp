@@ -1,7 +1,7 @@
 
 // // Created by ZintrulCre on 2020-09-18.
 
-#include "universal/std-pch.h"
+#include "include/std.h"
 
 class Solution {
 public:

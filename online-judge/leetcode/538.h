@@ -2,7 +2,7 @@
 // Created by ZintrulCre on 2020-09-22.
 //
 
-#include "universal/std-pch.h"
+#include "include/std.h"
 #include "online-judge/pch.h"
 
 class Solution {

@@ -4,12 +4,17 @@
 
 #include "smart-pointer/smart-pointer.h"
 
-void SmartPointer()
+void AutoPointerTest();
+void UniquePointerTest();
+void SharedPointerTest();
+void WeakPointerTest();
+
+void SmartPointerTest()
 {
-    // AutoPointerFoo();
-    // UniquePointerFoo();
-    SharedPointerFoo();
-    // WeakPointerFoo();
+    // AutoPointerTest();
+    // UniquePointerTest();
+    SharedPointerTest();
+    // WeakPointerTest();
 }
 
 template<typename T>
@@ -34,7 +39,7 @@ private:
     T t_;
 };
 
-void AutoPointerFoo()
+void AutoPointerTest()
 {
     // Object<int>* o = new Object<int>(1);
     // o->Print();
@@ -70,7 +75,7 @@ struct ArrayDeleter
     }
 };
 
-void UniquePointerFoo()
+void UniquePointerTest()
 {
     // Object<int>* o = new Object<int>(1);
     // UniquePointer<Object<int>> u1(o);
@@ -89,7 +94,7 @@ void UniquePointerFoo()
 
 }
 
-void SharedPointerFoo()
+void SharedPointerTest()
 {
     // Object<int>* o = new Object<int>(1);
     // SharedPointer<Object<int>> s1(o);
@@ -115,7 +120,7 @@ void SharedPointerFoo()
     cout << s1.UseCount() << ' ' << s2.UseCount() << endl;
 }
 
-void WeakPointerFoo()
+void WeakPointerTest()
 {
     Object<string> *o = new Object<string>("test");
     SharedPointer<Object<string>> s(o);

@@ -5,7 +5,7 @@
 #pragma once
 
 
-#include "universal/std-pch.h"
+#include "include/std.h"
 #include "online-judge/leetcode/pch.h"
 
 class Solution {
