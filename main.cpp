@@ -14,7 +14,7 @@ int main()
     // Test();
 
     // design-pattern
-    // DesignPatternTest();
+    DesignPatternTest();
 
     // smart-pointer
     // SmartPointerTest();
