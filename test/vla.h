@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include "include/std.h"
 #include "include/boost.h"
 

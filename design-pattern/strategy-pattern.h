@@ -2,7 +2,6 @@
 
 #include "include/std.h"
 
-template<typename T>
 class BaseStrategy
 {
 public:
@@ -10,22 +9,22 @@ public:
     virtual void StrategyImpl() = 0;
 };
 
-template<typename T>
-class StrategyA : public BaseStrategy<T>
+class StrategyA : public BaseStrategy
 {
 public:
     virtual void StrategyImpl()
     {
-        cout << "A" << endl;
+        int a = 1;
+        cout << a << endl;
     }
 };
 
-template<typename T>
-class StrategyB : public BaseStrategy<T>
+class StrategyB : public BaseStrategy
 {
 public:
     virtual void StrategyImpl()
     {
-        cout << "B" << endl;
+        int b = 2;
+        cout << b << endl;
     }
 };
