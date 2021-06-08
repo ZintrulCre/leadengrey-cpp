@@ -1,6 +1,8 @@
 #pragma once
 
+// io
 #include <iostream>
+#include <fstream>
 #include <cstdlib>
 #include <cstdint>
 #include <typeinfo>
@@ -30,6 +32,10 @@
 #include <set>
 #include <unordered_set>
 #include <bitset>
+
+// linux
+#include <fcntl.h>    /* For O_RDWR */
+#include <unistd.h>   /* For open(), creat() */
 
 using namespace std;
 

@@ -8,11 +8,13 @@
 #include "test/boost-typeid.h"
 #include "test/most-vexing-parse.h"
 #include "test/address-sanitizer-test.h"
+#include "test/write-file.h"
 
 void Test()
 {
     // VlaTest(3);
     // TypeidTest();
     // MostVexingParseTest();
+    LinuxSystemCall();
 }
 

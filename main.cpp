@@ -10,15 +10,15 @@ int main()
     // online-judge
     // OnlineJudge();
 
-    // test
-    // Test();
-
     // design-pattern
-    DesignPatternTest();
+    // DesignPatternTest();
 
     // smart-pointer
     // SmartPointerTest();
 
     // srot
     // SortTest();
+
+    // test
+    Test();
 }
