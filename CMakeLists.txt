@@ -12,10 +12,12 @@ set(CMAKE_CXX_FLAGS -Wall -Wextra -Werror)
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -Wvla)
 # optimization
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -O0)
-# lib
+# pthread
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -pthread)
-# sanitizer
-set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer)
+# libcurl
+set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -lcurl)
+# # sanitizer
+# set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fsanitize=address -fno-omit-frame-pointer)
 # diagnostics
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} -fdiagnostics-color)
 

@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <cstdint>
 #include <typeinfo>
+#include <stddef.h>
 
 // thread
 #include <thread>
@@ -32,6 +33,8 @@
 #include <set>
 #include <unordered_set>
 #include <bitset>
+
+#include <cstring>
 
 // linux
 #include <fcntl.h>    /* For O_RDWR */
