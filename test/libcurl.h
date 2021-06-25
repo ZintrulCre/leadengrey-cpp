@@ -3,6 +3,7 @@
 
 const char* url_arr[] = { "https://www.instagram.com/", "https://www.bilibili.com/" };
 int url_len = GetArraySize(url_arr);
+const char* url = "https://stackoverflow.com/";
 
 size_t write_data(void* buffer, size_t size, size_t count, void* stream) {
     (void)buffer;
@@ -10,11 +11,35 @@ size_t write_data(void* buffer, size_t size, size_t count, void* stream) {
     return size * count;
 }
 
+void LibcurlAsyncTest()
+{
+	CURL* curl_handle = curl_easy_init();
+    CURLM* curl_multi_handle = curl_multi_init();
+    curl_easy_setopt(curl_handle, CURLOPT_NOBODY, 1);
+    curl_easy_setopt(curl_handle, CURLOPT_URL, url);
+
+    std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
+
+	curl_easy_perform(curl_handle);
+
+    std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
+    printf("anchor1: %ld µs\n", std::chrono::duration_cast<std::chrono::microseconds>(t2 - t1).count());
+
+    curl_multi_add_handle(curl_multi_handle, curl_handle);
+    int handle_num = 0;
+    curl_multi_perform(curl_multi_handle, &handle_num);
+
+    std::chrono::steady_clock::time_point t3 = std::chrono::steady_clock::now();
+    printf("anchor2: %ld µs\n", std::chrono::duration_cast<std::chrono::microseconds>(t3 - t2).count());
+
+	curl_multi_remove_handle(curl_multi_handle, curl_handle);
+    curl_easy_cleanup(curl_handle);
+    curl_multi_cleanup(curl_multi_handle);
+}
+
 void MultiTest()
 {
     CURLM* curl_multi_handle = curl_multi_init();
-
-    std::chrono::steady_clock::time_point t1 = std::chrono::steady_clock::now();
 
     for (int i = 0; i < url_len; ++i) {
         CURL* easy_handle = curl_easy_init();
@@ -27,18 +52,12 @@ void MultiTest()
         curl_multi_add_handle(curl_multi_handle, easy_handle);
     }
     
-    std::chrono::steady_clock::time_point t2 = std::chrono::steady_clock::now();
-    printf("anchor1: %ld ms\n", std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1).count());
-
     int handle_num = 0;
     do
     {
         curl_multi_wait(curl_multi_handle, nullptr, 0, 1000, nullptr);
         curl_multi_perform(curl_multi_handle, &handle_num);
     } while (handle_num > 0);
-
-    std::chrono::steady_clock::time_point t3 = std::chrono::steady_clock::now();
-    printf("anchor2: %ld ms\n", std::chrono::duration_cast<std::chrono::milliseconds>(t3 - t2).count());
 
     int curl_msg_left_num = 0;
     CURLMsg* curl_msg = nullptr;

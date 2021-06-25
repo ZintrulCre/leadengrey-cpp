@@ -17,6 +17,7 @@ void Test()
     // TypeidTest();
     // MostVexingParseTest();
     // LinuxSystemCall();
-    MultiTest();
+    // MultiTest();
+    // LibcurlAsyncTest();
 }
 
