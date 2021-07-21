@@ -9,7 +9,8 @@
 // #include "test/most-vexing-parse.h"
 // #include "test/address-sanitizer-test.h"
 // #include "test/write-file.h"
-#include "test/libcurl.h"
+// #include "test/libcurl.h"
+#include "test/signal.h"
 
 void Test()
 {
@@ -19,5 +20,6 @@ void Test()
     // LinuxSystemCall();
     // MultiTest();
     // LibcurlAsyncTest();
+    SignalTest();
 }
 
