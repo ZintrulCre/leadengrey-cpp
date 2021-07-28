@@ -11,6 +11,9 @@ int main()
     // online-judge
     // OnlineJudge();
 
+    // leetcode
+    TreeNodeTest();
+
     // design-pattern
     // DesignPatternTest();
 
@@ -21,5 +24,5 @@ int main()
     // SortTest();
 
     // test
-    Test();
+    // Test();
 }

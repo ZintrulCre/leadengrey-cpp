@@ -1,26 +1,23 @@
-#include "online-judge/leetcode/leetcode.h"
+#include "online-judge/online-judge.h"
 
 void TreeNodeTest()
 {
-    TreeNode* a = new TreeNode(3);
-    TreeNode* b = new TreeNode(1);
-    TreeNode* c = new TreeNode(2);
-    TreeNode* d = new TreeNode(7);
-    TreeNode* e = new TreeNode(5);
-    TreeNode* f = new TreeNode(4);
-    TreeNode* h = new TreeNode(6);
+    TreeNode* a = new TreeNode(-10);
+    TreeNode* b = new TreeNode(9);
+    TreeNode* c = new TreeNode(20);
+    TreeNode* d = new TreeNode(15);
+    TreeNode* e = new TreeNode(7);
+    // TreeNode* f = new TreeNode(4);
+    // TreeNode* h = new TreeNode(6);
     a->left = b;
-    a->right = d;
-    b->right = c;
-    d->left = e;
-    e->left = f;
-    e->right = h;
+    a->right = c;
+    c->left = d;
+    c->right = e;
+    leadengrey::Print(a);
 
-    Print(a);
-    // Solution solution;
-    // int r = solution.minCameraCover(a);
-    // leadengrey::Print(r);
-
+    Solution solution;
+    int res = solution.maxPathSum(a);
+    leadengrey::Print(res);
 }
 
 // void ConcurrencyTest()

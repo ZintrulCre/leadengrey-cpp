@@ -1,6 +1,7 @@
 #pragma once
 
 #include "include/std.h"
+#include "base/base.h"
 #include "online-judge/leetcode/leetcode.h"
 
 void OnlineJudge();

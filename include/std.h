@@ -34,6 +34,7 @@
 #include <unordered_set>
 #include <bitset>
 
+#include <limits.h>
 #include <cstring>
 
 // linux
