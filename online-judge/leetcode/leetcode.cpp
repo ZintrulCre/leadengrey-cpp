@@ -36,10 +36,12 @@ void LeetCode()
 {
     // vector<vector<int>> board{{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
 
-    vector<vector<int>> test{{1,2},{2,3},{5},{0},{5},{},{}};
+    // vector<vector<int>> test{{1,2},{2,3},{5},{0},{5},{},{}};
+
+    vector<int> test{2,3,5};
     Solution solution;
-    vector<int> res = solution.eventualSafeNodes(test);
-    leadengrey::Print(res);
+    int r = solution.nthSuperUglyNumber(1, test);
+    leadengrey::Print(r);
 
     // Test()
     // ConcurrencyTest();
