@@ -38,9 +38,9 @@ void LeetCode()
 
     // vector<vector<int>> test{{1,2},{2,3},{5},{0},{5},{},{}};
 
-    vector<int> test{2,3,5};
+    vector<vector<int>> test{{0,1,100},{1,2,100},{0,2,500}};
     Solution solution;
-    int r = solution.nthSuperUglyNumber(1, test);
+    int r = solution.findCheapestPrice(3,test,0,2,1);
     leadengrey::Print(r);
 
     // Test()
