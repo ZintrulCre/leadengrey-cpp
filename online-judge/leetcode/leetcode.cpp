@@ -38,9 +38,9 @@ void LeetCode()
 
     // vector<vector<int>> test{{1,2},{2,3},{5},{0},{5},{},{}};
 
-    vector<vector<int>> test{{0,1,100},{1,2,100},{0,2,500}};
+    vector<vector<int>> test{{4,3,1},{3,2,4},{3},{4},{}};
     Solution solution;
-    int r = solution.findCheapestPrice(3,test,0,2,1);
+    auto r = solution.allPathsSourceTarget(test);
     leadengrey::Print(r);
 
     // Test()

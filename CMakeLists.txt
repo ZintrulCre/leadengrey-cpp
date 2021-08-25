@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.13.4)
 
-project(leaden-grey)
+set(project_name leadengrey-cpp)
+project(${project_name})
 
 # compile
 set(CMAKE_CXX_COMPILER "g++")
@@ -44,4 +45,4 @@ file(GLOB_RECURSE SMARTPOINTER_SOURCES "smart-pointer/*.cpp")
 file(GLOB_RECURSE SORT_SOURCES "sort/*.cpp")
 # message(STATUS "ONLINE_JUDGE_SOURCES: " ${ONLINE_JUDGE_SOURCES})
 
-add_executable(leaden-grey ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${ONLINE_JUDGE_SOURCES} ${SMARTPOINTER_SOURCES})
+add_executable(${project_name} ${DIR_SOURCES} ${DESIGN_PATTERN_SOURCES} ${ONLINE_JUDGE_SOURCES} ${SMARTPOINTER_SOURCES})
