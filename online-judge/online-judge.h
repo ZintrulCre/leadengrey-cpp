@@ -3,5 +3,6 @@
 #include "include/std.h"
 #include "base/base.h"
 #include "online-judge/leetcode/leetcode.h"
+#include "online-judge/coding-interviews/coding-interviews.h"
 
 void OnlineJudge();

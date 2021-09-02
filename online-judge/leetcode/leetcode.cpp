@@ -1,5 +1,7 @@
-#include "leetcode.h"
+#include "include/std.h"
 #include "base/base.h"
+#include "online-judge/leetcode/leetcode.h"
+#include "online-judge/data-structure.h"
 
 void TreeNodeTest()
 {

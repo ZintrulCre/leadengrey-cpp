@@ -1,6 +1,5 @@
 #pragma once
 
-#include "online-judge/leetcode/data-structure.h"
 // #include "online-judge/leetcode/37.h"
 // #include "online-judge/leetcode/39.h"
 // #include "online-judge/leetcode/40.h"

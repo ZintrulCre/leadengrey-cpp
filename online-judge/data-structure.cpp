@@ -1,4 +1,4 @@
-#include "online-judge/leetcode/data-structure.h"
+#include "online-judge/data-structure.h"
 
 void Print(TreeNode *root) {
     if (!root)
