@@ -41,19 +41,19 @@ void LeetCode()
     // vector<vector<int>> test{{1,2},{2,3},{5},{0},{5},{},{}};
 
     // vector<vector<int>> test{{4,3,1},{3,2,4},{3},{4},{}};
-    Solution solution;
-    auto r = solution.compareVersion("1.2", "1.10");
-    leadengrey::Print(r);
-    r = solution.compareVersion("1.01", "1.001");
-    leadengrey::Print(r);
-    r = solution.compareVersion("1.0", "1.0.0");
-    leadengrey::Print(r);
-    r = solution.compareVersion("0.1", "1.1");
-    leadengrey::Print(r);
-    r = solution.compareVersion("1.0.1", "1");
-    leadengrey::Print(r);
-    r = solution.compareVersion("7.5.2.4", "7.5.3");
-    leadengrey::Print(r);
+    // Solution solution;
+    // auto r = solution.compareVersion("1.2", "1.10");
+    // leadengrey::Print(r);
+    // r = solution.compareVersion("1.01", "1.001");
+    // leadengrey::Print(r);
+    // r = solution.compareVersion("1.0", "1.0.0");
+    // leadengrey::Print(r);
+    // r = solution.compareVersion("0.1", "1.1");
+    // leadengrey::Print(r);
+    // r = solution.compareVersion("1.0.1", "1");
+    // leadengrey::Print(r);
+    // r = solution.compareVersion("7.5.2.4", "7.5.3");
+    // leadengrey::Print(r);
 
     // Test()
     // ConcurrencyTest();
