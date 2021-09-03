@@ -7,6 +7,7 @@ class Solution {
 public:
     vector<int> smallestK(vector<int>& arr, int k) {
         vector<int> ret;
+        if (arr.size() == 0)    return ret;
         int x = 0, y = arr.size() - 1;
         while(true) {
             int pivot = arr[y];
@@ -15,14 +16,14 @@ public:
                 if (arr[i] < pivot)
                     swap(arr[i], arr[m++]);
             }
-            swap(arr[m++], pivot);
+            swap(arr[m], arr[y]);
 
-            if (m-x <= k) {
-                ret.insert(ret.end(), arr.begin()+x, arr.begin()+y);
+            if (m-x+1 <= k) {
+                ret.insert(ret.end(), arr.begin()+x, arr.begin()+m+1);
+                k -= (m-x+1);
                 x = m+1;
-                k -= (m-x);
             } else {
-                y = m+1;
+                y = m-1;
             }
             if (k == 0) {
                 break;
