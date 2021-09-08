@@ -17,6 +17,7 @@
 // #include "online-judge/leetcode/235.h"
 // #include "online-judge/leetcode/313.h"
 // #include "online-judge/leetcode/404.h"
+#include "online-judge/leetcode/502.h"
 // #include "online-judge/leetcode/538.h"
 // #include "online-judge/leetcode/617.h"
 // #include "online-judge/leetcode/637.h"

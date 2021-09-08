@@ -12,10 +12,10 @@ int main()
     // OnlineJudge();
 
     // leetcode
-    // LeetCode();
+    LeetCode();
 
     // interviews
-    Interviews();
+    // Interviews();
 
     // design-pattern
     // DesignPatternTest();

@@ -58,5 +58,11 @@ void LeetCode()
     // Test()
     // ConcurrencyTest();
     // TreeNodeTest();
+
+    // 502
+    Solution s;
+    vector<int> p{1,2,3}, c{0,1,2};
+    auto r = s.findMaximizedCapital(3, 0, p, c);
+    leadengrey::Print(r);
 }
 
