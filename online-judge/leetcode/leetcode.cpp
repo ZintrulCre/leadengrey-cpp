@@ -60,9 +60,16 @@ void LeetCode()
     // TreeNodeTest();
 
     // 502
+    // Solution s;
+    // vector<int> p{1,2,3}, c{0,1,2};
+    // auto r = s.findMaximizedCapital(3, 0, p, c);
+    // leadengrey::Print(r);
+
+    //68
     Solution s;
-    vector<int> p{1,2,3}, c{0,1,2};
-    auto r = s.findMaximizedCapital(3, 0, p, c);
+    vector<string> str{"Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"};
+    vector<string> r;
+    r = s.fullJustify(str, 20);
     leadengrey::Print(r);
 }
 
