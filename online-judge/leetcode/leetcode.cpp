@@ -59,6 +59,8 @@ void LeetCode()
     // ConcurrencyTest();
     // TreeNodeTest();
 
+    Solution s;
+
     // 502
     // Solution s;
     // vector<int> p{1,2,3}, c{0,1,2};
@@ -66,10 +68,13 @@ void LeetCode()
     // leadengrey::Print(r);
 
     //68
-    Solution s;
-    vector<string> str{"Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"};
-    vector<string> r;
-    r = s.fullJustify(str, 20);
+    // vector<string> str{"Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"};
+    // vector<string> r;
+    // r = s.fullJustify(str, 20);
+    // leadengrey::Print(r);
+
+    // 600
+    auto r = s.findIntegers(3);
     leadengrey::Print(r);
 }
 
