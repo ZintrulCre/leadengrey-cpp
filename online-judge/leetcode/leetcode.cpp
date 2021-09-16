@@ -59,8 +59,6 @@ void LeetCode()
     // ConcurrencyTest();
     // TreeNodeTest();
 
-    Solution s;
-
     // 502
     // Solution s;
     // vector<int> p{1,2,3}, c{0,1,2};
@@ -74,7 +72,17 @@ void LeetCode()
     // leadengrey::Print(r);
 
     // 600
-    auto r = s.findIntegers(3);
-    leadengrey::Print(r);
+    // auto r = s.findIntegers(3);
+    // leadengrey::Print(r);
+
+    // 212
+    // vector<vector<char>> b = {{'o','a','a','n'},{'e','t','a','e'},{'i','h','k','r'},{'i','f','l','v'}};
+    // vector<string> words = {"oath","pea","eat","rain"};
+    vector<vector<char>> b = {{'a','a'}};
+    vector<string> words = {"aaa"};
+    Solution s;
+    auto ret = s.findWords(b, words);
+    leadengrey::Print(ret);
+
 }
 
