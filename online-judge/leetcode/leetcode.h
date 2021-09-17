@@ -1,5 +1,6 @@
 #pragma once
 
+#include "online-judge/leetcode/36.h"
 // #include "online-judge/leetcode/37.h"
 // #include "online-judge/leetcode/39.h"
 // #include "online-judge/leetcode/40.h"
@@ -14,7 +15,7 @@
 // #include "online-judge/leetcode/165.h"
 // #include "online-judge/leetcode/173.h"
 // #include "online-judge/leetcode/216.h"
-#include "online-judge/leetcode/212.h"
+// #include "online-judge/leetcode/212.h"
 // #include "online-judge/leetcode/226.h"
 // #include "online-judge/leetcode/235.h"
 // #include "online-judge/leetcode/313.h"

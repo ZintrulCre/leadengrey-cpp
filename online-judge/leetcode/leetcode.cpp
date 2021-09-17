@@ -42,17 +42,17 @@ void LeetCode()
 
     // vector<vector<int>> test{{4,3,1},{3,2,4},{3},{4},{}};
     // Solution solution;
-    // auto r = solution.compareVersion("1.2", "1.10");
+    // auto r = solution.compareVersion('1.2', '1.10');
     // leadengrey::Print(r);
-    // r = solution.compareVersion("1.01", "1.001");
+    // r = solution.compareVersion('1.01', '1.001');
     // leadengrey::Print(r);
-    // r = solution.compareVersion("1.0", "1.0.0");
+    // r = solution.compareVersion('1.0', '1.0.0');
     // leadengrey::Print(r);
-    // r = solution.compareVersion("0.1", "1.1");
+    // r = solution.compareVersion('0.1', '1.1');
     // leadengrey::Print(r);
-    // r = solution.compareVersion("1.0.1", "1");
+    // r = solution.compareVersion('1.0.1', '1');
     // leadengrey::Print(r);
-    // r = solution.compareVersion("7.5.2.4", "7.5.3");
+    // r = solution.compareVersion('7.5.2.4', '7.5.3');
     // leadengrey::Print(r);
 
     // Test()
@@ -66,7 +66,7 @@ void LeetCode()
     // leadengrey::Print(r);
 
     //68
-    // vector<string> str{"Science","is","what","we","understand","well","enough","to","explain","to","a","computer.","Art","is","everything","else","we","do"};
+    // vector<string> str{'Science','is','what','we','understand','well','enough','to','explain','to','a','computer.','Art','is','everything','else','we','do'};
     // vector<string> r;
     // r = s.fullJustify(str, 20);
     // leadengrey::Print(r);
@@ -77,11 +77,17 @@ void LeetCode()
 
     // 212
     // vector<vector<char>> b = {{'o','a','a','n'},{'e','t','a','e'},{'i','h','k','r'},{'i','f','l','v'}};
-    // vector<string> words = {"oath","pea","eat","rain"};
-    vector<vector<char>> b = {{'a','a'}};
-    vector<string> words = {"aaa"};
+    // vector<string> words = {'oath','pea','eat','rain'};
+    // vector<vector<char>> b = {{'a','a'}};
+    // vector<string> words = {'aaa'};
+    // Solution s;
+    // auto ret = s.findWords(b, words);
+    // leadengrey::Print(ret);
+
+    // 36
+    vector<vector<char>> b = {{'5','3','.','.','7','.','.','.','.'},{'6','.','.','1','9','5','.','.','.'},{'.','9','8','.','.','.','.','6','.'},{'8','.','.','.','6','.','.','.','3'},{'4','.','.','8','.','3','.','.','1'},{'7','.','.','.','2','.','.','.','6'},{'.','6','.','.','.','.','2','8','.'},{'.','.','.','4','1','9','.','.','5'},{'.','.','.','.','8','.','.','7','9'}};
     Solution s;
-    auto ret = s.findWords(b, words);
+    auto ret = s.isValidSudoku(b);
     leadengrey::Print(ret);
 
 }
