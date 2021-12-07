@@ -91,9 +91,15 @@ void LeetCode()
     // leadengrey::Print(ret);
 
     // 239
-    vector<int> nums{1,3,-1,-3,5,3,6,7};
+    // vector<int> nums{1,3,-1,-3,5,3,6,7};
+    // Solution s;
+    // auto res = s.maxSlidingWindow(nums,3);
+    // leadengrey::Print(res);
+
+    // 1034
+    vector<vector<int>> nums{{1,1,1},{1,1,1},{1,1,1}};
     Solution s;
-    auto res = s.maxSlidingWindow(nums,3);
+    auto res = s.colorBorder(nums,1,1,2);
     leadengrey::Print(res);
 
 }
