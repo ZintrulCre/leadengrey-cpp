@@ -97,9 +97,30 @@ void LeetCode()
     // leadengrey::Print(res);
 
     // 1034
-    vector<vector<int>> nums{{1,1,1},{1,1,1},{1,1,1}};
+    // vector<vector<int>> nums{{1,1,1},{1,1,1},{1,1,1}};
+    // Solution s;
+    // auto res = s.colorBorder(nums,1,1,2);
+    // leadengrey::Print(res);
+
+    //689
+    // vector<int> nums{1,2,1,2,6,7,5,1};
+    // Solution s;
+    // auto res = s.maxSumOfThreeSubarrays(nums, 2);
+    // leadengrey::Print(res);
+
+    // 3
+    // Solution s;
+    // auto res = s.lengthOfLongestSubstring("ababccabd");
+    // leadengrey::Print(res);
+
+    // 438
+    // Solution s;
+    // auto res = s.findAnagrams("abaacbabc", "abc");
+    // leadengrey::Print(res);
+
+    // 476
     Solution s;
-    auto res = s.colorBorder(nums,1,1,2);
+    auto res = s.minWindow("ADOBECODEBANC", "ABC");
     leadengrey::Print(res);
 
 }
