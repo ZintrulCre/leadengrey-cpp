@@ -119,8 +119,14 @@ void LeetCode()
     // leadengrey::Print(res);
 
     // 476
+    // Solution s;
+    // auto res = s.minWindow("ADOBECODEBANC", "ABC");
+    // leadengrey::Print(res);
+
+    // 784
+    vector<string> words = {"step", "steps", "stripe", "stepple"};
     Solution s;
-    auto res = s.minWindow("ADOBECODEBANC", "ABC");
+    auto res = s.shortestCompletingWord("1s3 PSt", words);
     leadengrey::Print(res);
 
 }
