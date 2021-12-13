@@ -124,9 +124,14 @@ void LeetCode()
     // leadengrey::Print(res);
 
     // 784
-    vector<string> words = {"step", "steps", "stripe", "stepple"};
+    // vector<string> words = {"step", "steps", "stripe", "stepple"};
+    // Solution s;
+    // auto res = s.shortestCompletingWord("1s3 PSt", words);
+    // leadengrey::Print(res);
+
+    // 784
     Solution s;
-    auto res = s.shortestCompletingWord("1s3 PSt", words);
+    auto res = s.generateTrees(5);
     leadengrey::Print(res);
 
 }
