@@ -149,7 +149,7 @@ void LeetCode()
     Solution s;
     // vector<vector<int>> v = {{2,1,1},{2,3,1},{3,4,1}};
     vector<vector<int>> v = {{1,2,1}};
-    auto res = s.networkDelayTime(v, 2, 2);
+    auto res = s.networkDelayTime(v, 2, 1);
     leadengrey::Print(res);
 
 }
