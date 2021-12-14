@@ -2,31 +2,25 @@
 
 #include "include/std.h"
 
-struct STK {
-    void push() {
-
-    }
-
-    void pop() {
-        
-    }
-}
-
 class Solution {
 public:
-    string removeDuplicateLetters(string s) {
-        unordered_map<char> ori;
-        for (char c : s)
-            ori[c]++;
-        stack<char> stk;
+    string removeDuplicateLetters(string str) {
+        vector<int> rec(26, 0);
+        vector<uint8_t> used(26, 0);
+        for (char c : str)
+            rec[c-'a']++;
         string ret;
-        int i = 0, n = s.size();
-        while (!ori.empty()) {
-            char c = s[i];
-            if (ori[c] > 0) {
-
+        for (char c : str) {
+            if (!used[c-'a']) {
+                while (!ret.empty() && ret.back() >= c && rec[ret.back()-'a'] > 0) {
+                    used[ret.back() - 'a'] = 0;
+                    ret.pop_back();
+                }
+                ret += c;
+                used[c-'a'] = 1;
             }
-            ++i;
+            rec[c-'a']--;
         }
+        return ret;
     }
 };

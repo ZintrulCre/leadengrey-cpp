@@ -130,8 +130,26 @@ void LeetCode()
     // leadengrey::Print(res);
 
     // 784
+    // Solution s;
+    // auto res = s.generateTrees(5);
+    // leadengrey::Print(res);
+
+    // 316
+    // Solution s;
+    // auto res = s.removeDuplicateLetters("aqzabc");
+    // leadengrey::Print(res);
+
+    // 316
+    // Solution s;
+    // vector<vector<int>> v = {{0,1},{1,2},{1,0}};
+    // auto res = s.canFinish(3, v);
+    // leadengrey::Print(res);
+
+    // 743
     Solution s;
-    auto res = s.generateTrees(5);
+    // vector<vector<int>> v = {{2,1,1},{2,3,1},{3,4,1}};
+    vector<vector<int>> v = {{1,2,1}};
+    auto res = s.networkDelayTime(v, 2, 2);
     leadengrey::Print(res);
 
 }
