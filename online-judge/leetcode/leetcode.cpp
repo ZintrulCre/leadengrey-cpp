@@ -148,7 +148,6 @@ void LeetCode()
     // 743
     // Solution s;
     // vector<vector<int>> v = {{2,1,1},{2,3,1},{3,4,1}};
-<<<<<<< HEAD
     // vector<vector<int>> v = {{1,2,1}};
     // auto res = s.networkDelayTime(v, 2, 2);
     // leadengrey::Print(res);
@@ -158,10 +157,6 @@ void LeetCode()
     vector<vector<int>> v = {{1,0},{2,1},{3,1},{3,7},{4,3},{5,3},{6,3}};
     vector<int> u = {3,2,5,4,6,1,7,0};
     auto res = s.loudAndRich(v, u);
-=======
-    vector<vector<int>> v = {{1,2,1}};
-    auto res = s.networkDelayTime(v, 2, 1);
->>>>>>> a0e81a1da31898c8289b878cfb3a44a93ee42649
     leadengrey::Print(res);
 
 }
