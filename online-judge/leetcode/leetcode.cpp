@@ -164,9 +164,14 @@ void LeetCode()
     // auto res = s.solveNQueens(4);
     // leadengrey::Print(res);
 
+    // 224
+    // Solution s;
+    // auto res = s.solveNQueens(4);
+    // leadengrey::Print(res);
+
     // 1518
     Solution s;
-    auto res = s.solveNQueens(4);
+    auto res = s.numWaterBottles(7, 3);
     leadengrey::Print(res);
 
 }
