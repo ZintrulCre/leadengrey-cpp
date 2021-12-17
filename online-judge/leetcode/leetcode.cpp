@@ -153,10 +153,20 @@ void LeetCode()
     // leadengrey::Print(res);
 
     // 851
+    // Solution s;
+    // vector<vector<int>> v = {{1,0},{2,1},{3,1},{3,7},{4,3},{5,3},{6,3}};
+    // vector<int> u = {3,2,5,4,6,1,7,0};
+    // auto res = s.loudAndRich(v, u);
+    // leadengrey::Print(res);
+
+    // 51
+    // Solution s;
+    // auto res = s.solveNQueens(4);
+    // leadengrey::Print(res);
+
+    // 1518
     Solution s;
-    vector<vector<int>> v = {{1,0},{2,1},{3,1},{3,7},{4,3},{5,3},{6,3}};
-    vector<int> u = {3,2,5,4,6,1,7,0};
-    auto res = s.loudAndRich(v, u);
+    auto res = s.solveNQueens(4);
     leadengrey::Print(res);
 
 }
