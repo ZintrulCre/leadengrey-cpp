@@ -170,8 +170,17 @@ void LeetCode()
     // leadengrey::Print(res);
 
     // 1518
+    // Solution s;
+    // auto res = s.numWaterBottles(7, 3);
+    // leadengrey::Print(res);
+
+    // 475
     Solution s;
-    auto res = s.numWaterBottles(7, 3);
+    vector<int> a = {1,3,9,14};
+    vector<int> b = {4,10};
+    // vector<int> a = {1};
+    // vector<int> b = {1,2,3,4};
+    auto res = s.findRadius(a, b);
     leadengrey::Print(res);
 
 }
