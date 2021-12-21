@@ -175,13 +175,17 @@ void LeetCode()
     // leadengrey::Print(res);
 
     // 475
-    Solution s;
-    vector<int> a = {1,3,9,14};
-    vector<int> b = {4,10};
-    // vector<int> a = {1};
-    // vector<int> b = {1,2,3,4};
-    auto res = s.findRadius(a, b);
-    leadengrey::Print(res);
+    // Solution s;
+    // vector<int> a = {1,3,9,14};
+    // vector<int> b = {4,10};
+    // // vector<int> a = {1};
+    // // vector<int> b = {1,2,3,4};
+    // auto res = s.findRadius(a, b);
+    // leadengrey::Print(res);
 
+    // 1154
+    Solution s;
+    auto res = s.dayOfYear("2021-11-27");
+    leadengrey::Print(res);
 }
 
