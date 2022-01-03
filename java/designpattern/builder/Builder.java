@@ -1,7 +1,7 @@
-package designpattern;
+package designpattern.builder;
 
 public class Builder {
-    public Game BuildWoW() {
+    public Game buildWoW() {
         return new Game("Wow", 75);
     }
 }

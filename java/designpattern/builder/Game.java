@@ -1,4 +1,4 @@
-package designpattern;
+package designpattern.builder;
 
 abstract class GameBase {
     public String name;
