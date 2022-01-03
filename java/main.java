@@ -1,10 +1,13 @@
-import design_pattern.Builder;
+import designpattern.Builder;
+import designpattern.Game;
+
 public class main {
     public static void main(String[] args) {
         // leetcode.leetcode();
 
-        CharacterBuilder characterBuilder = new CharacterBuilder();
-        Character teenager = characterBuilder.BuildTeenager();
-        teenager.info();
+        Builder gameBuilder = new Builder();
+        Game wow = gameBuilder.BuildWoW();
+        System.out.println("test");
+        wow.info();
     }
 }
