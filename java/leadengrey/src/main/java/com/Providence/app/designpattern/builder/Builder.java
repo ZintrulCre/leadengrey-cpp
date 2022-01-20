@@ -1,4 +1,4 @@
-package designpattern.builder;
+package com.Providence.app.designpattern.builder;
 
 public class Builder {
     public Game buildWoW() {

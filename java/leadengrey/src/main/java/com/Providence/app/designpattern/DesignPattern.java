@@ -1,7 +1,7 @@
-package designpattern;
+package com.Providence.app.designpattern;
 
-import designpattern.builder.Builder;
-import designpattern.builder.Game;
+import com.Providence.app.designpattern.builder.Builder;
+import com.Providence.app.designpattern.builder.Game;
 
 public class DesignPattern {
     public static void Test() {
