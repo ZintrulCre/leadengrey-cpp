@@ -1,7 +1,7 @@
 #pragma once
 
 #include "include/std.h"
-#include "online-judge/pch.h"
+#include "online-judge/data-structure.h"
 
 // 1
 
@@ -49,7 +49,7 @@ public:
             q.pop();
             cout << node->val << endl;
             for (int i = 0; i < size; ++i) {
-                
+
             }
             if (reverse) {
                 if (node->right)    q.push(node->right);

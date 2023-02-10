@@ -1,6 +1,7 @@
 #pragma once
 
 #include "include/std.h"
+#include "online-judge/data-structure.h"
 
 // abstract a pre-0-indexed element
 

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "include/std.h"
-#include "online-judge/pch.h"
+#include "online-judge/data-structure.h"
 
 class Solution {
     TreeNode* divide(ListNode *head, ListNode *tail) {

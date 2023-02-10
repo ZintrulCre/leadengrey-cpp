@@ -1,7 +1,8 @@
 #pragma once
 
 #include "include/std.h"
-#include "online-judge/pch.h"
+#include "online-judge/online-judge.h"
+#include "online-judge/data-structure.h"
 
 class Solution {
     vector<vector<int>> res;

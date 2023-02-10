@@ -1,6 +1,6 @@
 #pragma once
 
-#include "online-judge/pch.h"
+#include "online-judge/data-structure.h"
 
 class Solution {
 public:
