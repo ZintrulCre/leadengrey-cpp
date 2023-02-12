@@ -3,38 +3,31 @@
 #include "include/std.h"
 
 class Solution {
-    unordered_map<char, int> m1, m2;
-
-    bool isCovered() {
-        for (auto &pair : m2) {
-            auto iter = m1.find(pair.first);
-            if (iter == m1.end() || iter->second < pair.second)
+    bool covered(unordered_map<char, int> &um, unordered_map<char, int> &comp) {
+        for (auto p : comp)
+            if (um[p.first] < p.second)
                 return false;
-        }
         return true;
     }
 
 public:
     string minWindow(string s, string t) {
-        m1 = unordered_map<char, int>(), m2 = unordered_map<char, int>();
+        string temp = s + 'x', res = temp;
+        int n = s.size(), m = t.size(), len = INT_MAX, idx = -1;
+        unordered_map<char, int> um, comp;
         for (char c : t)
-            m2[c]++;
-        int start = 0, n = s.size(), m = t.size(), minLen = INT_MAX;
-        string ret;
-        for (int i = 0; i < n; ++i) {
-            char c = s[i];
-            m1[c]++;
-            if (i >= m - 1) {
-                while (isCovered()) {
-                    if (minLen > i - start + 1) {
-                        minLen = i - start + 1;
-                        ret = s.substr(start, i - start + 1);
-                    }
-                    m1[s[start]]--;
-                    ++start;
+            ++comp[c];
+        for (int l = 0, r = 0; r < n; ++r) {
+            ++um[s[r]];
+            while (l <= r && covered(um, comp)) {
+                if (len > r - l + 1) {
+                    len = r - l + 1;
+                    idx = l;
                 }
+                --um[s[l]];
+                ++l;
             }
         }
-        return ret;
+        return idx == -1 ? "" : s.substr(idx, len);
     }
 };
