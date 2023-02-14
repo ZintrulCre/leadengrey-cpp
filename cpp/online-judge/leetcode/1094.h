@@ -5,16 +5,15 @@
 class Solution {
 public:
     bool carPooling(vector<vector<int>>& trips, int capacity) {
-        map<int, int> m;
-        for (auto& t : trips) {
-            m[t[1]] += t[0];
-            m[t[2]] -= t[0];
-            cout <<  m[t[1]] << ' ' << m[t[2]] << endl;
+        int n = trips.size();
+        vector<int> s(n, 0);
+        for (vector<int> &t : trips) {
+            s[t[1]] += t[0];
+            s[t[2]] -= t[0];
         }
-        int sum = 0;
-        for (auto p : m) {
-            sum += p.second;
-            if (sum > capacity)
+        for (int i = 0; i < n; ++i) {
+            capacity -= s[i];
+            if (capacity < 0)
                 return false;
         }
         return true;
